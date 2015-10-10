@@ -1,0 +1,37 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define fourInch ([UIScreen mainScreen].bounds.size.height == 480)
+
+#define fiveInch ([UIScreen mainScreen].bounds.size.height == 568)
+
+#define sixInch ([UIScreen mainScreen].bounds.size.height == 667)
+
+#define sixPlusInch ([UIScreen mainScreen].bounds.size.height == 1104 || [UIScreen mainScreen].bounds.size.height == 960)
+
+
+#define  TCCoror(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
+
+
+#define TCLog(formatString, ...) NSLog(formatString, ##__VA_ARGS__)
+
+//#define TCTest() NSLog(@"测试——————")
+
+#define TCTest(a) NSLog(@"测试——————%d",(a))
+
+
+//#define TCTest(b) NSLog(@"测试——————%@",(b))

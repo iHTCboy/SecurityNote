@@ -1,0 +1,63 @@
+
+/* Class = "IBUINavigationItem"; title = "密记"; ObjectID = "4wL-Dm-QX6"; */
+"4wL-Dm-QX6.title" = "密记";
+
+/* Class = "IBUINavigationItem"; title = "简记"; ObjectID = "56p-fP-uGN"; */
+"56p-fP-uGN.title" = "简记";
+
+/* Class = "IBUINavigationController"; title = "日记"; ObjectID = "APM-SF-wH8"; */
+"APM-SF-wH8.title" = "日记";
+
+/* Class = "IBUILabel"; text = "关于密记"; ObjectID = "Ciz-Na-aCR"; */
+"Ciz-Na-aCR.text" = "关于密记";
+
+/* Class = "IBUITextView"; text = "有點文藝，有點年輕，但不是文藝青年。"; ObjectID = "Khq-9y-0fd"; */
+"Khq-9y-0fd.text" = "有點文藝，有點年輕，但不是文藝青年。";
+
+/* Class = "IBUINavigationController"; title = "备忘"; ObjectID = "Lgc-Vn-UpR"; */
+"Lgc-Vn-UpR.title" = "备忘";
+
+/* Class = "IBUITabBarItem"; title = "我"; ObjectID = "Nbe-B3-UIW"; */
+"Nbe-B3-UIW.title" = "我";
+
+/* Class = "IBUILabel"; text = "反馈"; ObjectID = "R4I-ry-wSI"; */
+"R4I-ry-wSI.text" = "反馈";
+
+/* Class = "IBUILabel"; text = "手势密码锁定"; ObjectID = "W8v-BH-fTu"; */
+"W8v-BH-fTu.text" = "手势密码锁定";
+
+/* Class = "IBUINavigationItem"; title = "备忘"; ObjectID = "Yq2-0i-rrL"; */
+"Yq2-0i-rrL.title" = "备忘";
+
+/* Class = "IBUILabel"; text = "推荐好友"; ObjectID = "ZpW-4O-ass"; */
+"ZpW-4O-ass.text" = "推荐好友";
+
+/* Class = "IBUITableViewSection"; headerTitle = " "; ObjectID = "c2f-4W-ayw"; */
+"c2f-4W-ayw.headerTitle" = " ";
+
+/* Class = "IBUILabel"; text = "觉得不错？给我评分！"; ObjectID = "dNw-o3-8NS"; */
+"dNw-o3-8NS.text" = "觉得不错？给我评分！";
+
+/* Class = "IBUILabel"; text = "帮助与反馈"; ObjectID = "g7P-Sw-9TS"; */
+"g7P-Sw-9TS.text" = "帮助";
+
+/* Class = "IBUITabBarItem"; title = "备忘"; ObjectID = "hjQ-JS-Aa3"; */
+"hjQ-JS-Aa3.title" = "备忘";
+
+/* Class = "IBUINavigationController"; title = "简记"; ObjectID = "nhj-vE-MsX"; */
+"nhj-vE-MsX.title" = "简记";
+
+/* Class = "IBUITextField"; text = "密语"; ObjectID = "ptX-aH-CKa"; */
+"ptX-aH-CKa.text" = "密语";
+
+/* Class = "IBUINavigationItem"; title = "我"; ObjectID = "sez-WJ-JS4"; */
+"sez-WJ-JS4.title" = "我";
+
+/* Class = "IBUITableViewSection"; footerTitle = "  "; ObjectID = "uZh-fE-zuW"; */
+"uZh-fE-zuW.footerTitle" = "  ";
+
+/* Class = "IBUITabBarItem"; title = "密记"; ObjectID = "w57-Ny-63a"; */
+"w57-Ny-63a.title" = "密记";
+
+/* Class = "IBUITabBarItem"; title = "简记"; ObjectID = "zZd-h0-Yn0"; */
+"zZd-h0-Yn0.title" = "简记";
