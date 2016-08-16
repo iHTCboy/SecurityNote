@@ -8,4 +8,4 @@ The application of the main function is a simple notes.
 本应用主要是学习到TableView的使用和Sqlite数据库使用，使用了第三方库FMDB、MBProgressHUD。
 
 ### 下载地址
-[iOS AppStore](https://appsto.re/cn/cwRi3.i)
+[iOS App Store](https://appsto.re/cn/cwRi3.i)
