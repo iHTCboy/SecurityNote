@@ -12,6 +12,8 @@
 #import "TCAbutSNoteViewController.h"
 #import "TCHelpViewController.h"
 
+#import <StoreKit/StoreKit.h>
+
 @interface TCMeController ()<UITableViewDataSource,UITableViewDelegate,MFMessageComposeViewControllerDelegate,MFMailComposeViewControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 
@@ -99,8 +101,11 @@ NSTimer * timer;
     if (data)
     {
         //把该图片读出来
-        self.imageHead.image = [UIImage imageWithData:data];
-        
+        UIImage * image = [UIImage imageWithData:data];
+        CGFloat min = MIN(image.size.width, image.size.height);
+        self.imageHead.image = image;
+        self.imageHead.layer.cornerRadius = min/2;
+        self.imageHead.layer.masksToBounds = YES;
     }
     else
     {
@@ -214,12 +219,25 @@ NSTimer * timer;
         
     }
     
-    //关于密记
+    //评价
     if ([indexPath section] == 1 && [indexPath row] == 3)
+    {
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.3) {
+            [SKStoreReviewController requestReview];
+            
+        } else {
+            NSURL *url  = [NSURL URLWithString:@"https://itunes.apple.com/us/app/inotes/id925021570?l=zh&ls=1&mt=8&action=write-review"];
+            [[UIApplication sharedApplication] openURL:url];
+        }
+        
+    }
+    
+    //关于密记
+    if ([indexPath section] == 1 && [indexPath row] == 4)
     {
         
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
-       
+        
         self.hidesBottomBarWhenPushed = YES;
         
         [self.navigationController pushViewController:about animated:YES];
@@ -227,6 +245,7 @@ NSTimer * timer;
         self.hidesBottomBarWhenPushed = NO;
         
     }
+    
 
 
 
@@ -358,9 +377,9 @@ NSTimer * timer;
          
      }];
     
-    UIImage * image = info[UIImagePickerControllerOriginalImage];
+    UIImage * newImage = info[UIImagePickerControllerOriginalImage];
     
-    UIImage * newImage  = [self ellipseImage:image withInset:0 withBorderWidth:15 withBorderColor:TCCoror(38, 141, 252)];
+//    UIImage * newImage  = [self ellipseImage:image withInset:0 withBorderWidth:15 withBorderColor:TCCoror(38, 141, 252)];
     [self.imageHead setImage:newImage];
   
     

@@ -29,7 +29,7 @@
     
     UILabel * name = [[UILabel alloc]init];
     name.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.33);
-    name.bounds = CGRectMake(0, 0, 50, 80);
+    name.bounds = CGRectMake(0, 0, 100, 80);
     name.text = @"密记";
     name.textAlignment = NSTextAlignmentCenter;
     name.font = [UIFont boldSystemFontOfSize:25];
@@ -74,7 +74,7 @@
     UILabel * htc = [[UILabel alloc]init];
     htc.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.96);
     htc.bounds = CGRectMake(0, 0, 250, 80);
-    htc.text = @"何天从 版权所有";
+    htc.text = @"@iHTCboy All Rights";
     htc.textAlignment = NSTextAlignmentCenter;
     htc.textColor = TCCoror(147, 147, 147);
     htc.font = [UIFont systemFontOfSize:12];
@@ -84,7 +84,10 @@
     UILabel * rights = [[UILabel alloc]init];
     rights.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.98);
     rights.bounds = CGRectMake(0, 0, 250, 80);
-    rights.text = @"© 2014-2015 hetiancong All rights reserved";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy"];
+    NSString *yearString = [formatter stringFromDate:[NSDate date]];
+    rights.text = [NSString stringWithFormat:@"©2014-%@ iNotes @iHTCboy All rights reserved", yearString];
     rights.textAlignment = NSTextAlignmentCenter;
     rights.textColor = TCCoror(147, 147, 147);
     rights.font = [UIFont systemFontOfSize:11];
@@ -95,7 +98,7 @@
 
 -(void)goWeb
 {
-    UIActionSheet * sheets = [[UIActionSheet alloc]initWithTitle:@"通过Safari,选择您想要访问的网页" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"密记微博",@"密记博客", nil];
+    UIActionSheet * sheets = [[UIActionSheet alloc]initWithTitle:@"通过Safari,选择您想要访问的网页" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"作者微博",@"作者博客", nil];
     
     sheets.actionSheetStyle = UIActionSheetStyleAutomatic;
     
@@ -114,7 +117,7 @@
     }
     else if(buttonIndex == 1)
     {
-        NSURL * url = [NSURL URLWithString:@"http://blog.sina.com.cn/htcapp"];
+        NSURL * url = [NSURL URLWithString:@"http://www.ihtc.cc"];
         
         [[UIApplication sharedApplication] openURL:url];
         

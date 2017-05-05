@@ -27,11 +27,14 @@
 #define  TCCoror(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
 
 
+
+#ifdef DEBUG
 #define TCLog(formatString, ...) NSLog(formatString, ##__VA_ARGS__)
-
-//#define TCTest() NSLog(@"测试——————")
-
 #define TCTest(a) NSLog(@"测试——————%d",(a))
+#else
+#define TCLog(formatString, ...)
+#define TCTest(a)
+#endif
 
 
-//#define TCTest(b) NSLog(@"测试——————%@",(b))
+
