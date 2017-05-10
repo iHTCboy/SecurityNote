@@ -74,7 +74,6 @@
     // 其它事件
     [statTracker logEvent:@"usermodelName" eventLabel:[DHDeviceUtil deviceModelName]];
     [statTracker logEvent:@"systemVersion" eventLabel:[UIDevice currentDevice].systemVersion];
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

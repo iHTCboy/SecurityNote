@@ -155,8 +155,6 @@
 		6D195B501EBB7AED0081D227 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6D195B521EBB7AF30081D227 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6D195B541EBB7DD50081D227 /* Evaluate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Evaluate@2x.png"; sourceTree = "<group>"; };
-		6D195B561EBB80DC0081D227 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6D195B571EBB81000081D227 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		6D19B8D019DC3BCC00EBBEBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6D19B8D219DC553600EBBEBC /* TCAbutSNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAbutSNoteViewController.h; sourceTree = "<group>"; };
 		6D19B8D319DC553600EBBEBC /* TCAbutSNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAbutSNoteViewController.m; sourceTree = "<group>"; };
@@ -259,6 +257,8 @@
 		6DEB8A7919D19A04004D842A /* cluck@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cluck@2x.jpg"; sourceTree = "<group>"; };
 		6DF62182199E1C780026026C /* TCAddSimpleNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAddSimpleNoteViewController.h; sourceTree = "<group>"; };
 		6DF62183199E1C780026026C /* TCAddSimpleNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAddSimpleNoteViewController.m; sourceTree = "<group>"; };
+		6DF641991EC359FB0074C155 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		6DF6419A1EC359FF0074C155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -897,8 +897,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				6D09E4B5199CB6F600CEA8B3 /* Base */,
-				6D195B561EBB80DC0081D227 /* en */,
-				6D195B571EBB81000081D227 /* zh-Hans */,
+				6DF641991EC359FB0074C155 /* en */,
+				6DF6419A1EC359FF0074C155 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -1,0 +1,57 @@
+
+/* Class = "UINavigationController"; title = "日记"; ObjectID = "APM-SF-wH8"; */
+"APM-SF-wH8.title" = "日记";
+
+/* Class = "UILabel"; text = "写一个评价吧"; ObjectID = "Ciz-Na-aCR"; */
+"Ciz-Na-aCR.text" = "写一个评价吧";
+
+/* Class = "UINavigationItem"; title = "简记"; ObjectID = "Jec-WA-VNz"; */
+"Jec-WA-VNz.title" = "简记";
+
+/* Class = "UINavigationController"; title = "备忘"; ObjectID = "Lgc-Vn-UpR"; */
+"Lgc-Vn-UpR.title" = "备忘";
+
+/* Class = "UITabBarItem"; title = "我"; ObjectID = "Nbe-B3-UIW"; */
+"Nbe-B3-UIW.title" = "我";
+
+/* Class = "UILabel"; text = "反馈"; ObjectID = "R4I-ry-wSI"; */
+"R4I-ry-wSI.text" = "反馈";
+
+/* Class = "UILabel"; text = "关于密记"; ObjectID = "YGf-Uh-cnQ"; */
+"YGf-Uh-cnQ.text" = "关于密记";
+
+/* Class = "UILabel"; text = "推荐好友"; ObjectID = "ZpW-4O-ass"; */
+"ZpW-4O-ass.text" = "推荐好友";
+
+/* Class = "UILabel"; text = "帮助"; ObjectID = "g7P-Sw-9TS"; */
+"g7P-Sw-9TS.text" = "帮助";
+
+/* Class = "UINavigationItem"; title = "密记"; ObjectID = "gVI-xI-eQl"; */
+"gVI-xI-eQl.title" = "密记";
+
+/* Class = "UITabBarItem"; title = "备忘"; ObjectID = "hjQ-JS-Aa3"; */
+"hjQ-JS-Aa3.title" = "备忘";
+
+/* Class = "UINavigationItem"; title = "备忘"; ObjectID = "lNi-nG-wHG"; */
+"lNi-nG-wHG.title" = "备忘";
+
+/* Class = "UINavigationController"; title = "简记"; ObjectID = "nhj-vE-MsX"; */
+"nhj-vE-MsX.title" = "简记";
+
+/* Class = "UITextField"; text = "密语"; ObjectID = "ptX-aH-CKa"; */
+"ptX-aH-CKa.text" = "密语";
+
+/* Class = "UITableViewSection"; footerTitle = "   "; ObjectID = "qxm-KJ-75T"; */
+"qxm-KJ-75T.footerTitle" = "   ";
+
+/* Class = "UINavigationItem"; title = "我"; ObjectID = "sez-WJ-JS4"; */
+"sez-WJ-JS4.title" = "我";
+
+/* Class = "UITableViewSection"; footerTitle = "  "; ObjectID = "uZh-fE-zuW"; */
+"uZh-fE-zuW.footerTitle" = "  ";
+
+/* Class = "UITabBarItem"; title = "密记"; ObjectID = "w57-Ny-63a"; */
+"w57-Ny-63a.title" = "密记";
+
+/* Class = "UITabBarItem"; title = "简记"; ObjectID = "zZd-h0-Yn0"; */
+"zZd-h0-Yn0.title" = "简记";
