@@ -48,6 +48,11 @@
 {
     [super viewDidLoad];
     
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+        self.navigationController.navigationBar.largeTitleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    }
+    
     //列表
     UITableView * simpleTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 10) style:UITableViewStylePlain];
     simpleTable.separatorColor = TCCoror(51, 149, 253);

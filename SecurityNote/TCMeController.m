@@ -46,7 +46,11 @@ NSTimer * timer;
 {
     [super viewDidLoad];
     
-    
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+        self.navigationController.navigationBar.largeTitleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    }
+
     //设置Table属性
     //self.tableView.separatorColor = TCCoror(3, 123, 252);
 
