@@ -26,7 +26,9 @@
     
     UIImageView * logoV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logoabout.png"]];
     logoV.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.21);
-    logoV.bounds = CGRectMake(0, 0, 100, 100);
+    logoV.bounds = CGRectMake(0, 0, 120, 120);
+    logoV.layer.cornerRadius = 25;
+    logoV.layer.masksToBounds = YES;
     [self.view addSubview:logoV];
     
     
