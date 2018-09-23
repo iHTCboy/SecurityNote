@@ -122,7 +122,7 @@
     }
     else if(buttonIndex == 1)
     {
-        NSURL * url = [NSURL URLWithString:@"http://www.ihtc.cc"];
+        NSURL * url = [NSURL URLWithString:@"https://www.ihtcboy.com"];
         
         [[UIApplication sharedApplication] openURL:url];
         

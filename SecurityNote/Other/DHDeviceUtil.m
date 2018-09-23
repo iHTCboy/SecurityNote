@@ -88,7 +88,6 @@
     if ([deviceModel isEqualToString:@"iPad6,4"])      return @"iPad Pro 9.7";
     if ([deviceModel isEqualToString:@"iPad6,7"])      return @"iPad Pro 12.9";
     if ([deviceModel isEqualToString:@"iPad6,8"])      return @"iPad Pro 12.9";
-    
     if ([deviceModel isEqualToString:@"iPad6,11"])      return @"iPad (5th Gen)";
     if ([deviceModel isEqualToString:@"iPad6,12"])      return @"iPad (5th Gen)";
     if ([deviceModel isEqualToString:@"iPad7,1"])      return @"iPad Pro 12.9 (2nd Gen)";
@@ -96,7 +95,7 @@
     if ([deviceModel isEqualToString:@"iPad7,3"])      return @"iPad Pro 10.5";
     if ([deviceModel isEqualToString:@"iPad7,4"])      return @"iPad Pro 10.5";
     
-    
+    //AppleTV 系列
     if ([deviceModel isEqualToString:@"AppleTV2,1"])   return @"Apple TV 2G";
     if ([deviceModel isEqualToString:@"AppleTV3,1"])   return @"Apple TV 3";
     if ([deviceModel isEqualToString:@"AppleTV3,2"])   return @"Apple TV 3 (2013)";

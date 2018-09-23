@@ -34,7 +34,7 @@
     
     UILabel * name = [[UILabel alloc]init];
     name.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.45);
-    name.bounds = CGRectMake(0, 0, 100, 80);
+    name.bounds = CGRectMake(0, 0, self.view.frame.size.width, 80);
     name.text = @"密记";
     name.textAlignment = NSTextAlignmentCenter;
     name.font = [UIFont boldSystemFontOfSize:25];
@@ -51,8 +51,8 @@
     [self.view addSubview:version];
     
     UILabel * htc = [[UILabel alloc]init];
-    htc.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.96);
-    htc.bounds = CGRectMake(0, 0, 250, 80);
+    htc.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.95);
+    htc.bounds = CGRectMake(0, 0, self.view.frame.size.width, 80);
     htc.text = @"@iHTCboy All Rights";
     htc.textAlignment = NSTextAlignmentCenter;
     htc.textColor = TCCoror(147, 147, 147);
@@ -61,8 +61,8 @@
     
 
     UILabel * rights = [[UILabel alloc]init];
-    rights.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.98);
-    rights.bounds = CGRectMake(0, 0, 250, 80);
+    rights.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.97);
+    rights.bounds = CGRectMake(0, 0, self.view.frame.size.width, 80);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy"];
     NSString *yearString = [formatter stringFromDate:[NSDate date]];
