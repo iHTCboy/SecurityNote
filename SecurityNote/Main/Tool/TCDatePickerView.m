@@ -39,7 +39,7 @@ CGRect viewFrame;
         
         datePicker.datePickerMode = UIDatePickerModeDateAndTime;
         
-        datePicker.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"zh_CN"];
+        datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
          //@"en_US"
         
         

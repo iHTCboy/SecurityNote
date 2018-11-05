@@ -11,6 +11,7 @@
 #import "TCMemo.h"
 #import "MBProgressHUD+MJ.h"
 #import "TCYearPickerView.h"
+#import "DHDeviceUtil.h"
 
 @interface TCAddMemoViewController ()<UITextFieldDelegate,TCDatePickerViewDelegate, TCYearPickerViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITextViewDelegate,UIScrollViewDelegate>
 
@@ -122,7 +123,8 @@
 //导航栏颜色
 -(void)topColor
 {
-    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    CGFloat top = 60 + (MACRO_IS_IPHONE_X ? 24 : 0);
+    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, top)];
     
     topColor.backgroundColor  = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
     
@@ -167,8 +169,8 @@
 //内容栏
 -(void)detailViews
 {
-    
-    UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, 120, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
+    CGFloat top = 120 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, top, self.view.frame.size.width - 20, self.view.frame.size.height - top)];
     detailView.font = [UIFont systemFontOfSize:18];
     detailView.layer.borderWidth = 1.5;
     detailView.layer.borderColor = [[UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1] CGColor];
@@ -187,7 +189,8 @@
 //年份标签
 -(void)showYear
 {
-    UILabel * yearL = [[UILabel alloc]initWithFrame:CGRectMake(10, 93, 60, 15)];
+    CGFloat top = 93 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UILabel * yearL = [[UILabel alloc]initWithFrame:CGRectMake(10, top, 60, 15)];
     yearL.font = [UIFont systemFontOfSize:16];
     yearL.textAlignment = NSTextAlignmentCenter;
     yearL.text = [TCDatePickerView getNowDateFormat:@"yyyy年"];
@@ -197,7 +200,7 @@
     self.memoNote.year = yearL.text;
     
     //提供点击显示时间选择器
-    UIButton * touchYearL = [[UIButton alloc]initWithFrame:CGRectMake(10, 93, 60, 15)];
+    UIButton * touchYearL = [[UIButton alloc]initWithFrame:CGRectMake(10, top, 60, 15)];
     
     [touchYearL addTarget:self action:@selector(showYearPicker) forControlEvents:UIControlEventTouchUpInside];
     
@@ -225,8 +228,8 @@
 //时间标签
 -(void)showTime
 {
-    
-    UILabel * timeL =[[UILabel alloc]initWithFrame:CGRectMake(70, 93, 120, 15)];
+    CGFloat top = 93 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UILabel * timeL =[[UILabel alloc]initWithFrame:CGRectMake(70, top, 120, 15)];
     timeL.text = [TCDatePickerView getNowDateFormat:@"M月d日 HH:mm"];
     timeL.font = [UIFont systemFontOfSize:16];
     // dateLabel.userInteractionEnabled = YES;
@@ -236,7 +239,7 @@
     self.memoNote.time = timeL.text;
     
     //提供点击显示时间选择器
-    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(70, 93, 120, 15)];
+    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(70, top, 120, 15)];
     [touchLabel addTarget:self action:@selector(showPicker) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:touchLabel];
@@ -263,7 +266,8 @@
 //备忘类型标签
 -(void)showMemoType
 {
-    UITextField * memotypeF = [[UITextField alloc]initWithFrame:CGRectMake(190, 93, self.view.frame.size.width - 190, 20)];
+    CGFloat top = 93 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UITextField * memotypeF = [[UITextField alloc]initWithFrame:CGRectMake(190, top, self.view.frame.size.width - 190, 20)];
     memotypeF.font = [UIFont systemFontOfSize:16];
     memotypeF.placeholder = @"备忘类型";
     memotypeF.textAlignment = NSTextAlignmentCenter;
@@ -278,9 +282,10 @@
 //取消按钮
 -(void)backBtn
 {
+    CGFloat top = 30 + (MACRO_IS_IPHONE_X ? 14 : 0);
     UIButton * backBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    [backBn  setFrame:CGRectMake(5, 30, 60, 30)];
+    [backBn  setFrame:CGRectMake(5, top, 60, 30)];
     
     [backBn setTitle:@"取消" forState:UIControlStateNormal];
     
@@ -297,10 +302,10 @@
 //选择按钮
 -(void)saveBtn
 {
-    
+    CGFloat top = 30 + (MACRO_IS_IPHONE_X ? 14 : 0);
     UIButton * saveBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
-    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , 30, 60, 30)];
+    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , top, 60, 30)];
     
     [saveBn setTitle:@"保存" forState:UIControlStateNormal];
     

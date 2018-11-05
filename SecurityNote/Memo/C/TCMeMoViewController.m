@@ -11,6 +11,7 @@
 #import "TCMemo.h"
 #import "TCDatePickerView.h"
 #import "TCEditMemoViewController.h"
+#import "DHDeviceUtil.h"
 
 @interface TCMeMoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -49,8 +50,8 @@
     self.memoTable = memoTable;
     [self.view addSubview:memoTable];
     
-    
-    UIButton * add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - 120,  48, 48)];
+    CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
+    UIButton * add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - top,  48, 48)];
     [add setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
     [add addTarget:self action:@selector(addNew:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:add];

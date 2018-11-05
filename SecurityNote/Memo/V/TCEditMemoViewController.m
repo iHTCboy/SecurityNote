@@ -11,6 +11,8 @@
 #import "TCMemo.h"
 #import "MBProgressHUD+MJ.h"
 #import "TCYearPickerView.h"
+#import "DHDeviceUtil.h"
+
 
 @interface TCEditMemoViewController ()<TCDatePickerViewDelegate,TCYearPickerViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextViewDelegate,UIScrollViewDelegate>
 
@@ -64,18 +66,16 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        CGFloat top = 70 + (MACRO_IS_IPHONE_X ? 24 : 0);
         
-        UITextField * titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, 70, self.view.frame.size.width - 20, 35)];
+        UITextField * titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, top, self.view.frame.size.width - 20, 35)];
         titleField.font = [UIFont boldSystemFontOfSize:23];
         titleField.textAlignment = NSTextAlignmentCenter;
         titleField.clearButtonMode = UITextFieldViewModeWhileEditing;
         
         self.titleField = titleField;
-        //        titleField.layer.borderWidth = 2;
-        //        titleField.layer.borderColor = [[UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1] CGColor];
         
-        
-        UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, 110, self.view.frame.size.width - 20, self.view.frame.size.height - 110)];
+        UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +5, self.view.frame.size.width - 20, self.view.frame.size.height - 110)];
         detailView.font = [UIFont systemFontOfSize:18];
         
         detailView.layer.borderWidth = 1.5;
@@ -86,7 +86,7 @@
         self.detailView = detailView;
         self.detailView.delegate = self;
         
-        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"修改" style:UIBarButtonItemStyleBordered target:self action:@selector(beginEdit:)];
+        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"修改" style:UIBarButtonItemStylePlain target:self action:@selector(beginEdit:)];
         
         rightItem.tintColor = [UIColor whiteColor];
         
@@ -168,7 +168,7 @@
     {
         [UIImageView animateWithDuration:0.3 animations:^{
             
-            self.detailView.frame = CGRectMake(10, 135, self.view.frame.size.width - 20, self.view.frame.size.height - 135);
+            self.detailView.frame = CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +30, self.view.frame.size.width - 20, self.view.frame.size.height - 135);
             
             
             self.timeL.text = self.editNote.time;
@@ -205,7 +205,7 @@
             self.yearL.hidden = YES;
             self.memotypeF.hidden = YES;
             
-               self.detailView.frame = CGRectMake(10, 110, self.view.frame.size.width - 20, self.view.frame.size.height - 110);
+               self.detailView.frame = CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +5, self.view.frame.size.width - 20, self.view.frame.size.height - 110);
             
             //隐藏时间选择器
             [self.pickerView hiddenDatePickerView];
@@ -237,7 +237,7 @@
 //年份标签
 -(void)showYear
 {
-    UILabel * yearL = [[UILabel  alloc]initWithFrame:CGRectMake(10, 108, 60, 15)];
+    UILabel * yearL = [[UILabel  alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +3, 60, 15)];
     yearL.font = [UIFont systemFontOfSize:16];
     yearL.textAlignment = NSTextAlignmentCenter;
     self.yearL = yearL;
@@ -245,7 +245,7 @@
     [self.view addSubview:yearL];
     
     //提供点击显示时间选择器
-    UIButton * touchYearL = [[UIButton alloc]initWithFrame:CGRectMake(10, 108, 60, 15)];
+    UIButton * touchYearL = [[UIButton alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +3, 60, 15)];
     
     [touchYearL addTarget:self action:@selector(showYearPicker) forControlEvents:UIControlEventTouchUpInside];
  
@@ -277,14 +277,14 @@
 -(void)showTime
 {
     
-    UILabel * timeL =[[UILabel alloc]initWithFrame:CGRectMake(70, 108, 120, 15)];
+    UILabel * timeL =[[UILabel alloc]initWithFrame:CGRectMake(70, CGRectGetMaxY(self.titleField.frame) +3, 120, 15)];
     timeL.font = [UIFont systemFontOfSize:16];
     // dateLabel.userInteractionEnabled = YES;
     self.timeL = timeL;
     [self.view addSubview:timeL];
     
     //提供点击显示时间选择器
-    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(70, 108, 120, 15)];
+    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(70, CGRectGetMaxY(self.titleField.frame) +3, 120, 15)];
     [touchLabel addTarget:self action:@selector(showPicker) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:touchLabel];
@@ -317,7 +317,7 @@
 //备忘类型标签
 -(void)showMemoType
 {
-   UITextField * memotypeF = [[UITextField alloc]initWithFrame:CGRectMake(190, 108, self.view.frame.size.width - 190, 20)];
+   UITextField * memotypeF = [[UITextField alloc]initWithFrame:CGRectMake(190, CGRectGetMaxY(self.titleField.frame) +3, self.view.frame.size.width - 190, 20)];
     memotypeF.font = [UIFont systemFontOfSize:16];
     memotypeF.placeholder = @"备忘类型";
     memotypeF.textAlignment = NSTextAlignmentCenter;

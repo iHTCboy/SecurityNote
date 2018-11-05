@@ -8,6 +8,7 @@
 
 #import "TCAddSimpleNoteViewController.h"
 #import "TCSimpleNote.h"
+#import "DHDeviceUtil.h"
 
 @interface TCAddSimpleNoteViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
@@ -69,7 +70,10 @@
 
 -(void)topColor
 {
-    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    
+    CGFloat top = 60 + (MACRO_IS_IPHONE_X ? 24 : 0);
+
+    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, top)];
     
     topColor.backgroundColor  = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
     
@@ -79,7 +83,9 @@
 
 -(void)titleLabel
 {
-    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 00, 60, 30)];
+    CGFloat top = (MACRO_IS_IPHONE_X ? 14 : 0);
+    
+    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, top, 60, 30)];
     titleLabel.center = CGPointMake(self.view.frame.size.width /2, 40);
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"简记";
@@ -92,13 +98,10 @@
 
 -(void)addButten
 {
-
-    UIButton * addBtn =  [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 65, self.view.frame.size.height - 120,  48, 48)];
+    CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
+    UIButton * addBtn =  [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 65, self.view.frame.size.height - top,  48, 48)];
     [addBtn setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
-    
-    
-//    addBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
-//    addBtn.frame = CGRectMake(285, 58, 35, 35);
+
     
     UILabel * tagTitle = [[UILabel alloc]initWithFrame:CGRectMake(-13, 40, 80, 35)];
     tagTitle.text = @"增加一行";
@@ -172,8 +175,10 @@
 
 -(void)backBtn
 {
+    CGFloat top = (MACRO_IS_IPHONE_X ? 44 : 30);
+    
     UIButton * backBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backBn  setFrame:CGRectMake(5, 30, 60, 30)];
+    [backBn  setFrame:CGRectMake(5, top, 60, 30)];
     [backBn setTitle:@"取消" forState:UIControlStateNormal];
     backBn.tintColor = [UIColor whiteColor];
     backBn.titleLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -184,9 +189,9 @@
 
 -(void)saveBtn
 {
-    
+    CGFloat top = (MACRO_IS_IPHONE_X ? 44 : 30);
     UIButton * saveBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , 30, 60, 30)];
+    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , top, 60, 30)];
     [saveBn setTitle:@"保存" forState:UIControlStateNormal];
     saveBn.tintColor = [UIColor whiteColor];
     saveBn.titleLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -204,8 +209,9 @@
         [self.noteArray addObject:str];
     }
 
+    CGFloat top = 60 + (MACRO_IS_IPHONE_X ? 24 : 0);
     
-    UITableView * sTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    UITableView * sTable = [[UITableView alloc]initWithFrame:CGRectMake(0, top, self.view.frame.size.width, self.view.frame.size.height -top) style:UITableViewStyleGrouped];
     sTable.separatorColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
     sTable.delegate = self;
     sTable.dataSource = self;
@@ -260,14 +266,6 @@
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:addID];
         
     }
-//    else
-//    {
-//        
-//        while (cell.textLabel.font == [UIFont boldSystemFontOfSize:23])
-//        {
-//            cell.textLabel.font = [UIFont systemFontOfSize:18];
-//        }
-//    }
     
     NSInteger rowNow = [indexPath row];
     

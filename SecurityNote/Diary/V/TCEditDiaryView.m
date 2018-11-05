@@ -10,6 +10,7 @@
 #import "TCDiary.h"
 #import "TCDatePickerView.h"
 #import "MBProgressHUD+MJ.h"
+#import "DHDeviceUtil.h"
 
 @interface TCEditDiaryView ()<TCDatePickerViewDelegate,UITextViewDelegate,UIScrollViewDelegate>
 
@@ -43,18 +44,16 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        CGFloat top = 70 + (MACRO_IS_IPHONE_X ? 24 : 0);
         
-        UITextField * titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, 70, self.view.frame.size.width - 20, 35)];
+        UITextField * titleField = [[UITextField alloc]initWithFrame:CGRectMake(10, top, self.view.frame.size.width - 20, 35)];
         titleField.font = [UIFont boldSystemFontOfSize:23];
         titleField.textAlignment = NSTextAlignmentCenter;
         titleField.clearButtonMode = UITextFieldViewModeWhileEditing;
         
         self.titleField = titleField;
-        //        titleField.layer.borderWidth = 2;
-        //        titleField.layer.borderColor = [[UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1] CGColor];
         
-        
-        UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, 110, self.view.frame.size.width - 20, self.view.frame.size.height - 110)];
+        UITextView * detailView = [[UITextView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(titleField.frame) +5, self.view.frame.size.width - 20, self.view.frame.size.height - (CGRectGetMaxY(titleField.frame) +5))];
         detailView.font = [UIFont systemFontOfSize:18];
         
         detailView.layer.borderWidth = 1.5;
@@ -65,7 +64,7 @@
         self.detailView = detailView;
         self.detailView.delegate = self;
         
-        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"修改" style:UIBarButtonItemStyleBordered target:self action:@selector(beginEdit:)];
+        UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithTitle:@"修改" style:UIBarButtonItemStylePlain target:self action:@selector(beginEdit:)];
         
         rightItem.tintColor = [UIColor whiteColor];
         
@@ -137,7 +136,7 @@
     {
         [UIImageView animateWithDuration:0.3 animations:^{
             
-            self.detailView.frame = CGRectMake(10, 135, self.view.frame.size.width - 20, self.view.frame.size.height - 135);
+            self.detailView.frame = CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +30, self.view.frame.size.width - 20, self.view.frame.size.height - 135);
             
             
             self.dateLabel.text = [self.editNote.time substringFromIndex:5];
@@ -174,7 +173,7 @@
             self.weatherField.hidden = YES;
             self.moodField.hidden = YES;
             
-            self.detailView.frame = CGRectMake(10, 110, self.view.frame.size.width - 20, self.view.frame.size.height - 110);
+            self.detailView.frame = CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +5, self.view.frame.size.width - 20, self.view.frame.size.height - 110);
             
             //隐藏时间选择器
             [self.pickerView hiddenDatePickerView];
@@ -206,14 +205,14 @@
 -(void)showdateLabel
 {
     
-    UILabel * dateLabel =[[UILabel alloc]initWithFrame:CGRectMake(10, 110, 120, 15)];
+    UILabel * dateLabel =[[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +5, 120, 15)];
     dateLabel.font = [UIFont systemFontOfSize:16];
     // dateLabel.userInteractionEnabled = YES;
     self.dateLabel = dateLabel;
     [self.view addSubview:dateLabel];
     
     //提供点击显示时间选择器
-    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(10, 110, 120, 20)];
+    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(self.titleField.frame) +5, 120, 20)];
     [touchLabel addTarget:self action:@selector(showPicker) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:touchLabel];
@@ -242,7 +241,7 @@
 //天气标签
 -(void)showWeather
 {
-    UITextField * weatherField = [[UITextField alloc]initWithFrame:CGRectMake(130, 108,  (self.view.frame.size.width -135)/ 2, 20)];
+    UITextField * weatherField = [[UITextField alloc]initWithFrame:CGRectMake(130, CGRectGetMaxY(self.titleField.frame) +3,  (self.view.frame.size.width -135)/ 2, 20)];
     weatherField.font = [UIFont systemFontOfSize:16];
     weatherField.placeholder = @"现在的天气";
     weatherField.textAlignment = NSTextAlignmentCenter;
@@ -257,7 +256,7 @@
 //心情标签
 -(void)showMood
 {
-    UITextField * moodField = [[UITextField alloc]initWithFrame:CGRectMake( 135 +(self.view.frame.size.width -135)/ 2, 108, (self.view.frame.size.width -135)/ 2, 20)];
+    UITextField * moodField = [[UITextField alloc]initWithFrame:CGRectMake( 135 +(self.view.frame.size.width -135)/ 2, CGRectGetMaxY(self.titleField.frame) +3, (self.view.frame.size.width -135)/ 2, 20)];
     moodField.font = [UIFont systemFontOfSize:16];
     moodField.placeholder = @"我的心情";
     moodField.textAlignment = NSTextAlignmentCenter;

@@ -11,6 +11,7 @@
 #import "TCDiary.h"
 #import "TCDatePickerView.h"
 #import "TCEditDiaryView.h"
+#import "DHDeviceUtil.h"
 
 @interface TCDiaryViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -51,8 +52,8 @@
     self.diaryTable = dairyTab;
     [self.view addSubview:dairyTab];
     
-    
-    UIButton * add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - 120,  48, 48)];
+    CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
+    UIButton * add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - top,  48, 48)];
     [add setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
     [add addTarget:self action:@selector(addNew:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:add];

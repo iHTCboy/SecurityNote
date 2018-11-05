@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *feedBackCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *recommed;
 @property (weak, nonatomic) IBOutlet UITableViewCell *aboutSnot;
+@property (weak, nonatomic) IBOutlet UITableViewCell *userprotocolBtn;
 
 @end
 
@@ -250,6 +251,11 @@ NSTimer * timer;
         
     }
     
+    if ([indexPath section] == 1 && [indexPath row] == 5) {
+        NSURL * url = [NSURL URLWithString:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
+        
+        [[UIApplication sharedApplication] openURL:url];
+    }
 
 
 

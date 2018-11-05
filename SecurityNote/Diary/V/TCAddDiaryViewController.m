@@ -10,7 +10,7 @@
 #import "TCDatePickerView.h"
 #import "TCDiary.h"
 #import "MBProgressHUD+MJ.h"
-
+#import "DHDeviceUtil.h"
 
 @interface TCAddDiaryViewController ()<UITextFieldDelegate,UITextViewDelegate, TCDatePickerViewDelegate,UIScrollViewDelegate>
 
@@ -89,7 +89,9 @@
 //导航栏颜色
 -(void)topColor
 {
-    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    
+    CGFloat top = 60 + (MACRO_IS_IPHONE_X ? 24 : 0);
+    UIView * topColor = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, top)];
     
     topColor.backgroundColor  = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
     
@@ -100,7 +102,8 @@
 //密记
 -(void)titleLabel
 {
-    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 60, 30)];
+    CGFloat top = (MACRO_IS_IPHONE_X ? 14 : 0);
+    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, top, 60, 30)];
     titleLabel.center = CGPointMake(self.view.frame.size.width /2, 40);
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"密记";
@@ -113,7 +116,6 @@
 //密记的标题
 -(void)titleFileds
 {
-
     UITextField * titleField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 20, 35)];
     titleField.center = CGPointMake(self.view.frame.size.width /2, 72.5);
     titleField.font = [UIFont boldSystemFontOfSize:23];
@@ -134,8 +136,8 @@
 //内容栏
 -(void)detailViews
 {
-
-    UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, 120, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
+    CGFloat top = 120 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UITextView * detailView =[[UITextView alloc]initWithFrame:CGRectMake(10, top, self.view.frame.size.width - 20, self.view.frame.size.height - 120)];
     detailView.font = [UIFont systemFontOfSize:18];
     detailView.layer.borderWidth = 1.5;
     detailView.layer.borderColor = [[UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1] CGColor];
@@ -156,8 +158,8 @@
 //时间标签
 -(void)showdateLabel
 {
-   
-    UILabel * dateLabel =[[UILabel alloc]initWithFrame:CGRectMake(10, 95, 120, 15)];
+   CGFloat top = 95 +  (MACRO_IS_IPHONE_X ? 14 : 0);
+    UILabel * dateLabel =[[UILabel alloc]initWithFrame:CGRectMake(10, top, 120, 15)];
     dateLabel.text = [TCDatePickerView getNowDateFormat:@"M月d日 HH:mm"];
     dateLabel.font = [UIFont systemFontOfSize:16];
    // dateLabel.userInteractionEnabled = YES;
@@ -165,7 +167,7 @@
     [self.view addSubview:dateLabel];
     
     //提供点击显示时间选择器
-    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(0, 90, 130, 20)];
+    UIButton * touchLabel = [[UIButton alloc]initWithFrame:CGRectMake(0, top -5, 130, 20)];
     [touchLabel addTarget:self action:@selector(showPicker) forControlEvents:UIControlEventTouchUpInside];
     
     self.diaryNote.time = [TCDatePickerView getNowDateFormat:@"yyyy年M月d日 HH:mm"];
@@ -194,7 +196,8 @@
 //天气标签
 -(void)showWeather
 {
-    UITextField * weatherField = [[UITextField alloc]initWithFrame:CGRectMake(130, 93, (self.view.frame.size.width -135)/ 2, 20)];
+    CGFloat top = 93 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UITextField * weatherField = [[UITextField alloc]initWithFrame:CGRectMake(130, top, (self.view.frame.size.width -135)/ 2, 20)];
     weatherField.font = [UIFont systemFontOfSize:16];
     weatherField.placeholder = @"现在的天气";
     weatherField.textAlignment = NSTextAlignmentCenter;
@@ -209,7 +212,8 @@
 //心情标签
 -(void)showMood
 {
-    UITextField * moodField = [[UITextField alloc]initWithFrame:CGRectMake( 135 +(self.view.frame.size.width -135)/ 2, 93, (self.view.frame.size.width -135)/ 2, 20)];
+    CGFloat top = 93 + (MACRO_IS_IPHONE_X ? 14 : 0);
+    UITextField * moodField = [[UITextField alloc]initWithFrame:CGRectMake( 135 +(self.view.frame.size.width -135)/ 2, top, (self.view.frame.size.width -135)/ 2, 20)];
     moodField.font = [UIFont systemFontOfSize:16];
     moodField.placeholder = @"我的心情";
     moodField.textAlignment = NSTextAlignmentCenter;
@@ -225,8 +229,9 @@
 //取消按钮
 -(void)backBtn
 {
+    CGFloat top = 30 + (MACRO_IS_IPHONE_X ? 14 : 0);
     UIButton * backBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backBn  setFrame:CGRectMake(5, 30, 60, 30)];
+    [backBn  setFrame:CGRectMake(5, top, 60, 30)];
     
     [backBn setTitle:@"取消" forState:UIControlStateNormal];
     
@@ -243,9 +248,9 @@
 //选择按钮
 -(void)saveBtn
 {
-
+    CGFloat top = 30 + (MACRO_IS_IPHONE_X ? 14 : 0);
     UIButton * saveBn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , 30, 60, 30)];
+    [saveBn  setFrame:CGRectMake(self.view.frame.size.width - 65 , top, 60, 30)];
     
     [saveBn setTitle:@"保存" forState:UIControlStateNormal];
     

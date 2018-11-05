@@ -5,6 +5,9 @@
 /* Class = "UILabel"; text = "写一个评价吧"; ObjectID = "Ciz-Na-aCR"; */
 "Ciz-Na-aCR.text" = "写一个评价吧";
 
+/* Class = "UILabel"; text = "用户条款"; ObjectID = "EaW-xJ-Gk2"; */
+"EaW-xJ-Gk2.text" = "用户条款";
+
 /* Class = "UINavigationItem"; title = "简记"; ObjectID = "Jec-WA-VNz"; */
 "Jec-WA-VNz.title" = "简记";
 

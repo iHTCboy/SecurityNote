@@ -216,6 +216,8 @@
 		6D99210319D048CC00FBB62D /* TCSimpleNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSimpleNote.m; sourceTree = "<group>"; };
 		6D99210619D048ED00FBB62D /* TCSimpleNoteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSimpleNoteTool.h; sourceTree = "<group>"; };
 		6D99210719D048ED00FBB62D /* TCSimpleNoteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSimpleNoteTool.m; sourceTree = "<group>"; };
+		6DA8390A21908F5F0043BD7B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6DA8390C21908F8E0043BD7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6DC3642A199886B6008A9CDE /* 密记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "密记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC3642D199886B6008A9CDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6DC3642F199886B6008A9CDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -261,8 +263,6 @@
 		6DEB8A7919D19A04004D842A /* cluck@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cluck@2x.jpg"; sourceTree = "<group>"; };
 		6DF62182199E1C780026026C /* TCAddSimpleNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAddSimpleNoteViewController.h; sourceTree = "<group>"; };
 		6DF62183199E1C780026026C /* TCAddSimpleNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAddSimpleNoteViewController.m; sourceTree = "<group>"; };
-		6DF641991EC359FB0074C155 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		6DF6419A1EC359FF0074C155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,90 +300,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6D04E1D7199DC780004731BD /* C */ = {
-			isa = PBXGroup;
-			children = (
-				6D04E1CE199DAEE6004731BD /* TCDiaryViewController.h */,
-				6D04E1CF199DAEE6004731BD /* TCDiaryViewController.m */,
-			);
-			name = C;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D04E1D8199DC793004731BD /* V */ = {
-			isa = PBXGroup;
-			children = (
-				6D04E1DB199DECF7004731BD /* TCAddDiaryViewController.h */,
-				6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */,
-				6D4BF15019D98FC900818EB5 /* TCEditDiaryView.h */,
-				6D4BF15119D98FC900818EB5 /* TCEditDiaryView.m */,
-			);
-			name = V;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D04E1D9199DEBE1004731BD /* C */ = {
-			isa = PBXGroup;
-			children = (
-				6D04E1D1199DB87D004731BD /* TCSimpleNoteViewController.h */,
-				6D04E1D2199DB87D004731BD /* TCSimpleNoteViewController.m */,
-			);
-			name = C;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D04E1DA199DEBE7004731BD /* V */ = {
-			isa = PBXGroup;
-			children = (
-				6DF62182199E1C780026026C /* TCAddSimpleNoteViewController.h */,
-				6DF62183199E1C780026026C /* TCAddSimpleNoteViewController.m */,
-			);
-			name = V;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D09BA61199F0AF0009363FF /* C */ = {
-			isa = PBXGroup;
-			children = (
-				6D04E1D4199DB89F004731BD /* TCMeMoViewController.h */,
-				6D04E1D5199DB89F004731BD /* TCMeMoViewController.m */,
-			);
-			name = C;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D09BA62199F0AFD009363FF /* V */ = {
-			isa = PBXGroup;
-			children = (
-				6D09BA63199F0B1B009363FF /* TCAddMemoViewController.h */,
-				6D09BA64199F0B1B009363FF /* TCAddMemoViewController.m */,
-				6D172ED919DA4626004E0B96 /* TCEditMemoViewController.h */,
-				6D172EDA19DA4626004E0B96 /* TCEditMemoViewController.m */,
-			);
-			name = V;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D09BA66199F0CA9009363FF /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = C;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D172ED819DA440E004E0B96 /* M */ = {
-			isa = PBXGroup;
-			children = (
-				6D172EDC19DA4640004E0B96 /* TCMemo.h */,
-				6D172EDD19DA4640004E0B96 /* TCMemo.m */,
-				6D172EDF19DA464D004E0B96 /* TCMemoTool.h */,
-				6D172EE019DA464D004E0B96 /* TCMemoTool.m */,
-			);
-			name = M;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		6D2C0F7D2157E59300C37783 /* stars */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,22 +400,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		6D2C0F8F2157F1AD00C37783 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				6D52A2E519DBF901003F0004 /* main */,
-				6D7971C519D80730001ECAD1 /* Tool */,
-				6D09BA66199F0CA9009363FF /* C */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		6D2C0F902157F1BA00C37783 /* SimpleNote */ = {
 			isa = PBXGroup;
 			children = (
-				6D99210119D0486A00FBB62D /* M */,
-				6D04E1DA199DEBE7004731BD /* V */,
-				6D04E1D9199DEBE1004731BD /* C */,
+				6DA664F1218EF140001652D6 /* M */,
+				6DA664F2218EF14B001652D6 /* V */,
+				6DA664F3218EF15F001652D6 /* C */,
 			);
 			path = SimpleNote;
 			sourceTree = "<group>";
@@ -507,9 +413,9 @@
 		6D2C0F912157F1C700C37783 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				6D7971C419D7F945001ECAD1 /* M */,
-				6D04E1D8199DC793004731BD /* V */,
-				6D04E1D7199DC780004731BD /* C */,
+				6DA664F4218EF189001652D6 /* M */,
+				6DA664F5218EF195001652D6 /* V */,
+				6DA664F6218EF19F001652D6 /* C */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -517,9 +423,9 @@
 		6D2C0F932157F1DD00C37783 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
-				6D172ED819DA440E004E0B96 /* M */,
-				6D09BA62199F0AFD009363FF /* V */,
-				6D09BA61199F0AF0009363FF /* C */,
+				6DA664F7218EF1DC001652D6 /* M */,
+				6DA664F8218EF1E4001652D6 /* V */,
+				6DA664F9218EF1EA001652D6 /* C */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -585,7 +491,16 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
-		6D52A2E519DBF901003F0004 /* main */ = {
+		6DA664EE218EF0E8001652D6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6DA664EF218EF0FC001652D6 /* main */,
+				6DA664F0218EF115001652D6 /* Tool */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6DA664EF218EF0FC001652D6 /* main */ = {
 			isa = PBXGroup;
 			children = (
 				6DC3643C199886B6008A9CDE /* TCAppDelegate.h */,
@@ -595,23 +510,10 @@
 				6D6489C219DD4479008A69D0 /* TCShowViewController.h */,
 				6D6489C319DD4479008A69D0 /* TCShowViewController.m */,
 			);
-			name = main;
-			path = ..;
+			path = main;
 			sourceTree = "<group>";
 		};
-		6D7971C419D7F945001ECAD1 /* M */ = {
-			isa = PBXGroup;
-			children = (
-				6D68CAEA19D8290200892D62 /* TCDiary.h */,
-				6D68CAEB19D8290200892D62 /* TCDiary.m */,
-				6D68CAED19D8292C00892D62 /* TCDiaryTool.h */,
-				6D68CAEE19D8292C00892D62 /* TCDiaryTool.m */,
-			);
-			name = M;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		6D7971C519D80730001ECAD1 /* Tool */ = {
+		6DA664F0218EF115001652D6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 				6D940367199FB2EA001E83CA /* TCDatePickerView.h */,
@@ -619,11 +521,10 @@
 				6D3B105419DA697600B00A86 /* TCYearPickerView.h */,
 				6D3B105519DA697600B00A86 /* TCYearPickerView.m */,
 			);
-			name = Tool;
-			path = ..;
+			path = Tool;
 			sourceTree = "<group>";
 		};
-		6D99210119D0486A00FBB62D /* M */ = {
+		6DA664F1218EF140001652D6 /* M */ = {
 			isa = PBXGroup;
 			children = (
 				6D99210219D048CC00FBB62D /* TCSimpleNote.h */,
@@ -631,8 +532,87 @@
 				6D99210619D048ED00FBB62D /* TCSimpleNoteTool.h */,
 				6D99210719D048ED00FBB62D /* TCSimpleNoteTool.m */,
 			);
-			name = M;
-			path = ..;
+			path = M;
+			sourceTree = "<group>";
+		};
+		6DA664F2218EF14B001652D6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				6DF62182199E1C780026026C /* TCAddSimpleNoteViewController.h */,
+				6DF62183199E1C780026026C /* TCAddSimpleNoteViewController.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		6DA664F3218EF15F001652D6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6D04E1D1199DB87D004731BD /* TCSimpleNoteViewController.h */,
+				6D04E1D2199DB87D004731BD /* TCSimpleNoteViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		6DA664F4218EF189001652D6 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				6D68CAEA19D8290200892D62 /* TCDiary.h */,
+				6D68CAEB19D8290200892D62 /* TCDiary.m */,
+				6D68CAED19D8292C00892D62 /* TCDiaryTool.h */,
+				6D68CAEE19D8292C00892D62 /* TCDiaryTool.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		6DA664F5218EF195001652D6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				6D04E1DB199DECF7004731BD /* TCAddDiaryViewController.h */,
+				6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */,
+				6D4BF15019D98FC900818EB5 /* TCEditDiaryView.h */,
+				6D4BF15119D98FC900818EB5 /* TCEditDiaryView.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		6DA664F6218EF19F001652D6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6D04E1CE199DAEE6004731BD /* TCDiaryViewController.h */,
+				6D04E1CF199DAEE6004731BD /* TCDiaryViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		6DA664F7218EF1DC001652D6 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				6D172EDC19DA4640004E0B96 /* TCMemo.h */,
+				6D172EDD19DA4640004E0B96 /* TCMemo.m */,
+				6D172EDF19DA464D004E0B96 /* TCMemoTool.h */,
+				6D172EE019DA464D004E0B96 /* TCMemoTool.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		6DA664F8218EF1E4001652D6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				6D09BA63199F0B1B009363FF /* TCAddMemoViewController.h */,
+				6D09BA64199F0B1B009363FF /* TCAddMemoViewController.m */,
+				6D172ED919DA4626004E0B96 /* TCEditMemoViewController.h */,
+				6D172EDA19DA4626004E0B96 /* TCEditMemoViewController.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		6DA664F9218EF1EA001652D6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6D04E1D4199DB89F004731BD /* TCMeMoViewController.h */,
+				6D04E1D5199DB89F004731BD /* TCMeMoViewController.m */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 		6DC36421199886B5008A9CDE = {
@@ -680,15 +660,12 @@
 		6DC36433199886B6008A9CDE /* SecurityNote */ = {
 			isa = PBXGroup;
 			children = (
-				6D2C0F8F2157F1AD00C37783 /* Main */,
+				6DA664EE218EF0E8001652D6 /* Main */,
 				6D2C0F902157F1BA00C37783 /* SimpleNote */,
 				6D2C0F912157F1C700C37783 /* Diary */,
 				6D2C0F932157F1DD00C37783 /* Memo */,
 				6D2C0F942157F1ED00C37783 /* Me */,
 				6D2C0F952157F1F900C37783 /* Other */,
-				6D195B371EBB78E50081D227 /* Launch Screen.storyboard */,
-				6D09E4B4199CB6F600CEA8B3 /* Main.storyboard */,
-				6DC36445199886B6008A9CDE /* Images.xcassets */,
 				6D2C0F842157EAEC00C37783 /* Thirdparty */,
 				6D2C0F832157EAC400C37783 /* Resources */,
 				6DC36434199886B6008A9CDE /* Supporting Files */,
@@ -699,6 +676,9 @@
 		6DC36434199886B6008A9CDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6D195B371EBB78E50081D227 /* Launch Screen.storyboard */,
+				6D09E4B4199CB6F600CEA8B3 /* Main.storyboard */,
+				6DC36445199886B6008A9CDE /* Images.xcassets */,
 				6D2C0F892157EC3500C37783 /* LICENSE */,
 				6D2C0F872157EC2400C37783 /* README.md */,
 				6DC36435199886B6008A9CDE /* SecurityNote-Info.plist */,
@@ -933,8 +913,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				6D09E4B5199CB6F600CEA8B3 /* Base */,
-				6DF641991EC359FB0074C155 /* en */,
-				6DF6419A1EC359FF0074C155 /* zh-Hans */,
+				6DA8390A21908F5F0043BD7B /* zh-Hans */,
+				6DA8390C21908F8E0043BD7B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

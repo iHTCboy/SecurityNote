@@ -9,7 +9,7 @@
 #import "TCSimpleNoteViewController.h"
 #import "TCAddSimpleNoteViewController.h"
 #import "TCSimpleNote.h"
-
+#import "DHDeviceUtil.h"
 
 @interface TCSimpleNoteViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate>
 
@@ -63,9 +63,9 @@
     self.simpleTable = simpleTable;
     [self.view addSubview:simpleTable];
 
-    
+    CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
     //增加按钮
-    UIButton * addBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - 120,  48, 48)];
+    UIButton * addBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - top,  48, 48)];
     [addBtn setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addNew:) forControlEvents:UIControlEventTouchUpInside];
     self.addBtn = addBtn;
