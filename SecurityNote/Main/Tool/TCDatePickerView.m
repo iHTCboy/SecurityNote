@@ -8,6 +8,12 @@
 
 #import "TCDatePickerView.h"
 
+@interface TCDatePickerView()
+
+@property (nonatomic, assign) CGRect viewFrame;
+
+@end
+
 
 @implementation TCDatePickerView
 
@@ -17,15 +23,13 @@ UIDatePicker * datePicker;
 
 NSString * turnNowDate;
 
-CGRect viewFrame;
-
 //初始化
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         
-        viewFrame = frame;
+        self.viewFrame = frame;
         
         self.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, 256);
         
@@ -33,7 +37,7 @@ CGRect viewFrame;
         
         self.alpha = 0.9;
         
-        datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 25,viewFrame.size.width, 216)];
+        datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 25,self.viewFrame.size.width, 216)];
         
         datePicker.backgroundColor = [UIColor clearColor];
         
@@ -112,7 +116,7 @@ CGRect viewFrame;
 {
     [UIView animateWithDuration:0.2 animations:^{
         
-        self.frame = CGRectMake(0, viewFrame.size.height - 256, viewFrame.size.width, 256);
+        self.frame = CGRectMake(0, self.viewFrame.size.height - 256, self.viewFrame.size.width, 256);
         
     } completion:^(BOOL finished) {
         
@@ -130,7 +134,7 @@ CGRect viewFrame;
     
     [UIView animateWithDuration:0.2 animations:^{
         
-        self.frame = CGRectMake(0, viewFrame.size.height, viewFrame.size.width, 256);
+        self.frame = CGRectMake(0, self.viewFrame.size.height, self.viewFrame.size.width, 256);
         
     } completion:^(BOOL finished) {
         
@@ -148,12 +152,12 @@ CGRect viewFrame;
         if (hidden)
         {
             
-            self.frame = CGRectMake(0, viewFrame.size.height, viewFrame.size.width, 256);
+            self.frame = CGRectMake(0, self.viewFrame.size.height, self.viewFrame.size.width, 256);
         }
         else
         {
            // self.hidden = hidden;
-            self.frame = CGRectMake(0, viewFrame.size.height - 256, viewFrame.size.width, 256);
+            self.frame = CGRectMake(0, self.viewFrame.size.height - 256, self.viewFrame.size.width, 256);
         }
         
         
@@ -179,7 +183,7 @@ CGRect viewFrame;
 -(void)toolTateBar
 {
     
-    UIView * topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, viewFrame.size.width, 30)];
+    UIView * topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.viewFrame.size.width, 30)];
     
     UIButton * leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(8, 5, 60, 30)];
     leftBtn.selected = NO;
@@ -195,7 +199,7 @@ CGRect viewFrame;
     
     
     
-    UIButton * rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(viewFrame.size.width - 68, 5, 60, 30)];
+    UIButton * rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.viewFrame.size.width - 68, 5, 60, 30)];
     [rightBtn setTitle:@"确定" forState:UIControlStateNormal];
     [rightBtn setTitleColor:[UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1] forState:UIControlStateNormal];
     rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];

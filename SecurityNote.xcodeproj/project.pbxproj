@@ -11,6 +11,7 @@
 		6D04E1D3199DB87D004731BD /* TCSimpleNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D04E1D2199DB87D004731BD /* TCSimpleNoteViewController.m */; };
 		6D04E1D6199DB89F004731BD /* TCMeMoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D04E1D5199DB89F004731BD /* TCMeMoViewController.m */; };
 		6D04E1DD199DECF7004731BD /* TCAddDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */; };
+		6D06A3A3227C861A00606D2A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D06A3A2227C861A00606D2A /* SafariServices.framework */; };
 		6D071E871999B14B003A9F8D /* TCMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D071E861999B14B003A9F8D /* TCMeController.m */; };
 		6D09BA65199F0B1B009363FF /* TCAddMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09BA64199F0B1B009363FF /* TCAddMemoViewController.m */; };
 		6D09E4B6199CB6F600CEA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E4B4199CB6F600CEA8B3 /* Main.storyboard */; };
@@ -128,6 +129,8 @@
 		6D04E1D5199DB89F004731BD /* TCMeMoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMeMoViewController.m; sourceTree = "<group>"; };
 		6D04E1DB199DECF7004731BD /* TCAddDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAddDiaryViewController.h; sourceTree = "<group>"; };
 		6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAddDiaryViewController.m; sourceTree = "<group>"; };
+		6D06A3A2227C861A00606D2A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		6D06A3A5227C8B1000606D2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6D071E851999B14B003A9F8D /* TCMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMeController.h; sourceTree = "<group>"; };
 		6D071E861999B14B003A9F8D /* TCMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMeController.m; sourceTree = "<group>"; };
 		6D09BA63199F0B1B009363FF /* TCAddMemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAddMemoViewController.h; sourceTree = "<group>"; };
@@ -216,7 +219,6 @@
 		6D99210319D048CC00FBB62D /* TCSimpleNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSimpleNote.m; sourceTree = "<group>"; };
 		6D99210619D048ED00FBB62D /* TCSimpleNoteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSimpleNoteTool.h; sourceTree = "<group>"; };
 		6D99210719D048ED00FBB62D /* TCSimpleNoteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSimpleNoteTool.m; sourceTree = "<group>"; };
-		6DA8390A21908F5F0043BD7B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6DA8390C21908F8E0043BD7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6DC3642A199886B6008A9CDE /* 密记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "密记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC3642D199886B6008A9CDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -270,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D06A3A3227C861A00606D2A /* SafariServices.framework in Frameworks */,
 				6DC36430199886B6008A9CDE /* CoreGraphics.framework in Frameworks */,
 				6D195B531EBB7AF30081D227 /* StoreKit.framework in Frameworks */,
 				6D195B511EBB7AED0081D227 /* WebKit.framework in Frameworks */,
@@ -637,6 +640,7 @@
 		6DC3642C199886B6008A9CDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D06A3A2227C861A00606D2A /* SafariServices.framework */,
 				6D195B521EBB7AF30081D227 /* StoreKit.framework */,
 				6D195B501EBB7AED0081D227 /* WebKit.framework */,
 				6D195B4E1EBB7AE20081D227 /* libc++.tbd */,
@@ -752,7 +756,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TC;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = JoonSheng;
 				TargetAttributes = {
 					6DC36429199886B5008A9CDE = {
@@ -765,7 +769,7 @@
 			};
 			buildConfigurationList = 6DC36425199886B5008A9CDE /* Build configuration list for PBXProject "SecurityNote" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -913,8 +917,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				6D09E4B5199CB6F600CEA8B3 /* Base */,
-				6DA8390A21908F5F0043BD7B /* zh-Hans */,
 				6DA8390C21908F8E0043BD7B /* en */,
+				6D06A3A5227C8B1000606D2A /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -954,23 +958,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: he tiancong (73C25USF4U)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: he tiancong (28PV6G96R7)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -993,22 +1012,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1035,10 +1068,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SecurityNote/baidu_ios_api",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1060,10 +1093,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SecurityNote/baidu_ios_api",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1087,6 +1120,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SecurityNoteTests/SecurityNoteTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "htc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1105,6 +1139,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityNote/SecurityNote-Prefix.pch";
 				INFOPLIST_FILE = "SecurityNoteTests/SecurityNoteTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "htc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

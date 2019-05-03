@@ -13,6 +13,7 @@
 #import "TCHelpViewController.h"
 
 #import <StoreKit/StoreKit.h>
+#import <SafariServices/SafariServices.h>
 
 @interface TCMeController ()<UITableViewDataSource,UITableViewDelegate,MFMessageComposeViewControllerDelegate,MFMailComposeViewControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -214,12 +215,9 @@ NSTimer * timer;
     if ([indexPath section] == 1 && [indexPath row] == 2)
     {
         UIActionSheet * sheet = [[UIActionSheet alloc]initWithTitle:@"选择推荐给好友的方式" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"短信",@"邮件", nil];
-        
         sheet.actionSheetStyle = UIActionSheetStyleAutomatic;
-        
         //帮定tag
         sheet.tag = 2;
-        
         [sheet showInView:self.view];
         
     }
@@ -231,41 +229,34 @@ NSTimer * timer;
             [SKStoreReviewController requestReview];
             
         } else {
-            NSURL *url  = [NSURL URLWithString:@"https://itunes.apple.com/us/app/inotes/id925021570?l=zh&ls=1&mt=8&action=write-review"];
+            NSURL *url  = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8&action=write-review"];
             [[UIApplication sharedApplication] openURL:url];
         }
-        
+    }
+    
+    if ([indexPath section] == 1 && [indexPath row] == 4)
+    {
+        [self openWebView:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8"];
     }
     
     //关于密记
-    if ([indexPath section] == 1 && [indexPath row] == 4)
+    if ([indexPath section] == 1 && [indexPath row] == 5)
     {
-        
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
-        
         self.hidesBottomBarWhenPushed = YES;
-        
         [self.navigationController pushViewController:about animated:YES];
-        
         self.hidesBottomBarWhenPushed = NO;
-        
     }
     
-    if ([indexPath section] == 1 && [indexPath row] == 5) {
-        NSURL * url = [NSURL URLWithString:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
-        
-        [[UIApplication sharedApplication] openURL:url];
+    if ([indexPath section] == 1 && [indexPath row] == 6) {
+        [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
     }
-
-
-
 }
 
 
 //alertView方法调用,需要实现UIAlertViewDelegate协议
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    
     if (buttonIndex == 0)
     {
 
@@ -279,9 +270,7 @@ NSTimer * timer;
         NSUserDefaults * defaults =[NSUserDefaults standardUserDefaults];
         [defaults setValue:self.textView.text forKey:@"textView"];
         [defaults synchronize];
-
     }
-    
 }
 
 
@@ -497,6 +486,25 @@ NSTimer * timer;
     UIImage *newimg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newimg;
+}
+
+- (void)openWebView:(NSString *)url
+{
+    if (@available(iOS 9.0, *)) {
+        SFSafariViewController *sf = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:url]];
+        sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
+        sf.preferredControlTintColor = [UIColor whiteColor];
+        if (@available(iOS 11.0, *)) {
+            sf.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;
+        } else {
+            // Fallback on earlier versions
+        }
+        [self presentViewController:sf animated:YES completion:nil];
+    }
+    else {
+        NSURL * urlstr = [NSURL URLWithString:url];
+        [[UIApplication sharedApplication] openURL:urlstr];
+    }
 }
 
 @end

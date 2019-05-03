@@ -26,6 +26,9 @@
 /* Class = "UILabel"; text = "推荐好友"; ObjectID = "ZpW-4O-ass"; */
 "ZpW-4O-ass.text" = "Refer a friend";
 
+/* Class = "UILabel"; text = "AppStore评价"; ObjectID = "a2Q-VE-DeO"; */
+"a2Q-VE-DeO.text" = "AppStore Comment";
+
 /* Class = "UILabel"; text = "帮助"; ObjectID = "g7P-Sw-9TS"; */
 "g7P-Sw-9TS.text" = "help";
 

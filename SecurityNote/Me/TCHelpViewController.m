@@ -7,6 +7,7 @@
 //
 
 #import "TCHelpViewController.h"
+#import <SafariServices/SafariServices.h>
 
 @interface TCHelpViewController ()<UIActionSheetDelegate>
 
@@ -115,22 +116,32 @@
 {
     if (buttonIndex == 0)
     {
-        NSURL * url = [NSURL URLWithString:@"http://weibo.com/iHTCapp"];
-        
-        [[UIApplication sharedApplication] openURL:url];
-       
+        [self openWebView:@"http://weibo.com/iHTCapp"];
     }
     else if(buttonIndex == 1)
     {
-        NSURL * url = [NSURL URLWithString:@"https://www.ihtcboy.com"];
-        
-        [[UIApplication sharedApplication] openURL:url];
-        
+        [self openWebView:@"https://www.ihtcboy.com"];
     }
+}
 
-    
 
-
+- (void)openWebView:(NSString *)url
+{
+    if (@available(iOS 9.0, *)) {
+        SFSafariViewController *sf = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:url]];
+        sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
+        sf.preferredControlTintColor = [UIColor whiteColor];
+        if (@available(iOS 11.0, *)) {
+            sf.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;
+        } else {
+            // Fallback on earlier versions
+        }
+        [self presentViewController:sf animated:YES completion:nil];
+    }
+    else {
+        NSURL * urlstr = [NSURL URLWithString:url];
+        [[UIApplication sharedApplication] openURL:urlstr];
+    }
 }
 
 @end

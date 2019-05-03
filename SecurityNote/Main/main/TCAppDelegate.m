@@ -85,6 +85,7 @@
     [statTracker logEvent:@"Devices" eventLabel:[[UIDevice currentDevice] name]];
     [statTracker logEvent:@"DateAndDeviceName" eventLabel:[NSString stringWithFormat:@"%@ %@", currentDate, [[UIDevice currentDevice] name]]];
     [statTracker logEvent:@"DateSystemVersion" eventLabel:[NSString stringWithFormat:@"%@ %@", currentDate, [[UIDevice currentDevice] systemVersion]]];
+    [statTracker logEvent:@"AppName" eventLabel:[NSString stringWithFormat:@"%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]]];
 #endif
 }
 
