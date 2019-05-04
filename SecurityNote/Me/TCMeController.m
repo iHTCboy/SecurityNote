@@ -108,16 +108,16 @@ NSTimer * timer;
     {
         //把该图片读出来
         UIImage * image = [UIImage imageWithData:data];
-        CGFloat min = MIN(image.size.width, image.size.height);
+        //CGFloat min = MIN(image.size.width, image.size.height);
         self.imageHead.image = image;
-        self.imageHead.layer.cornerRadius = min/2;
-        self.imageHead.layer.masksToBounds = YES;
     }
     else
     {
-         [self.imageHead setImage:[self ellipseImage:[UIImage imageNamed:@"cluck.jpg"] withInset:0 withBorderWidth:15 withBorderColor:TCCoror(38, 141, 252)]];
+         [self.imageHead setImage:[self ellipseImage:[UIImage imageNamed:@"cluck.jpg"] withInset:0 withBorderWidth:5 withBorderColor:TCCoror(38, 141, 252)]];
     }
     
+    self.imageHead.layer.cornerRadius = self.imageHead.frame.size.width/2;
+    self.imageHead.layer.masksToBounds = YES;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -239,8 +239,12 @@ NSTimer * timer;
         [self openWebView:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8"];
     }
     
+    if ([indexPath section] == 1 && [indexPath row] == 5) {
+        [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
+    }
+    
     //关于密记
-    if ([indexPath section] == 1 && [indexPath row] == 5)
+    if ([indexPath section] == 1 && [indexPath row] == 6)
     {
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
         self.hidesBottomBarWhenPushed = YES;
@@ -248,9 +252,6 @@ NSTimer * timer;
         self.hidesBottomBarWhenPushed = NO;
     }
     
-    if ([indexPath section] == 1 && [indexPath row] == 6) {
-        [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
-    }
 }
 
 
@@ -492,12 +493,12 @@ NSTimer * timer;
 {
     if (@available(iOS 9.0, *)) {
         SFSafariViewController *sf = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:url]];
-        sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
-        sf.preferredControlTintColor = [UIColor whiteColor];
+        if (@available(iOS 10.0, *)) {
+            sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
+            sf.preferredControlTintColor = [UIColor whiteColor];
+        }
         if (@available(iOS 11.0, *)) {
             sf.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;
-        } else {
-            // Fallback on earlier versions
         }
         [self presentViewController:sf animated:YES completion:nil];
     }

@@ -55,7 +55,7 @@
     user.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.55);
     user.bounds = CGRectMake(0, 0,280, 80);
     user.numberOfLines = 0;
-    user.text = @"如果您在使用过程中，有任何疑问或者意见，欢迎访问密记:";
+    user.text = @"如果您在使用过程中，有任何疑问或者建议，欢迎反馈！";
     user.textAlignment = NSTextAlignmentCenter;
     user.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:user];
@@ -104,7 +104,7 @@
 
 -(void)goWeb
 {
-    UIActionSheet * sheets = [[UIActionSheet alloc]initWithTitle:@"通过Safari,选择您想要访问的网页" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"作者微博",@"作者博客", nil];
+    UIActionSheet * sheets = [[UIActionSheet alloc]initWithTitle:@"选择您想要访问的页面" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"作者微博",@"作者博客", nil];
     
     sheets.actionSheetStyle = UIActionSheetStyleAutomatic;
     
@@ -116,32 +116,35 @@
 {
     if (buttonIndex == 0)
     {
-        [self openWebView:@"http://weibo.com/iHTCapp"];
+        [self openWebView:@"https://weibo.com/iHTCapp"];
     }
     else if(buttonIndex == 1)
     {
-        [self openWebView:@"https://www.ihtcboy.com"];
+        [self openWebView:@"https://ihtcboy.com"];
     }
 }
 
 
 - (void)openWebView:(NSString *)url
 {
-    if (@available(iOS 9.0, *)) {
-        SFSafariViewController *sf = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:url]];
-        sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
-        sf.preferredControlTintColor = [UIColor whiteColor];
-        if (@available(iOS 11.0, *)) {
-            sf.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;
-        } else {
-            // Fallback on earlier versions
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        if (@available(iOS 9.0, *)) {
+            SFSafariViewController *sf = [[SFSafariViewController alloc] initWithURL:[[NSURL alloc] initWithString:url]];
+            if (@available(iOS 10.0, *)) {
+                sf.preferredBarTintColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:1];
+                sf.preferredControlTintColor = [UIColor whiteColor];
+            }
+            if (@available(iOS 11.0, *)) {
+                sf.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;
+            }
+            [self presentViewController:sf animated:YES completion:nil];
         }
-        [self presentViewController:sf animated:YES completion:nil];
-    }
-    else {
-        NSURL * urlstr = [NSURL URLWithString:url];
-        [[UIApplication sharedApplication] openURL:urlstr];
-    }
+        else {
+            NSURL * urlstr = [NSURL URLWithString:url];
+            [[UIApplication sharedApplication] openURL:urlstr];
+        }
+    });
 }
 
 @end

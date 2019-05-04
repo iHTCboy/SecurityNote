@@ -12,6 +12,7 @@
 		6D04E1D6199DB89F004731BD /* TCMeMoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D04E1D5199DB89F004731BD /* TCMeMoViewController.m */; };
 		6D04E1DD199DECF7004731BD /* TCAddDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */; };
 		6D06A3A3227C861A00606D2A /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D06A3A2227C861A00606D2A /* SafariServices.framework */; };
+		6D06A3A7227D354700606D2A /* appstore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D06A3A6227D354700606D2A /* appstore@2x.png */; };
 		6D071E871999B14B003A9F8D /* TCMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D071E861999B14B003A9F8D /* TCMeController.m */; };
 		6D09BA65199F0B1B009363FF /* TCAddMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09BA64199F0B1B009363FF /* TCAddMemoViewController.m */; };
 		6D09E4B6199CB6F600CEA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E4B4199CB6F600CEA8B3 /* Main.storyboard */; };
@@ -131,6 +132,7 @@
 		6D04E1DC199DECF7004731BD /* TCAddDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAddDiaryViewController.m; sourceTree = "<group>"; };
 		6D06A3A2227C861A00606D2A /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		6D06A3A5227C8B1000606D2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6D06A3A6227D354700606D2A /* appstore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appstore@2x.png"; sourceTree = "<group>"; };
 		6D071E851999B14B003A9F8D /* TCMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMeController.h; sourceTree = "<group>"; };
 		6D071E861999B14B003A9F8D /* TCMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMeController.m; sourceTree = "<group>"; };
 		6D09BA63199F0B1B009363FF /* TCAddMemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAddMemoViewController.h; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		6D2C0F7E2157E5A900C37783 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				6D06A3A6227D354700606D2A /* appstore@2x.png */,
 				6D195B541EBB7DD50081D227 /* Evaluate@2x.png */,
 				6DC4A9CE1A43388E007CEC75 /* help@2x.png */,
 				6DC4A9CC1A4337CF007CEC75 /* bii@2x.png */,
@@ -830,6 +833,7 @@
 				6D52A2F719DC08E8003F0004 /* baiwan@3x.png in Resources */,
 				6D52A2EC19DC05EE003F0004 /* list@3x.png in Resources */,
 				6D195B551EBB7DD50081D227 /* Evaluate@2x.png in Resources */,
+				6D06A3A7227D354700606D2A /* appstore@2x.png in Resources */,
 				6D52A30219DC0D7F003F0004 /* bi.png in Resources */,
 				6DC4A9D51A433970007CEC75 /* 64.png in Resources */,
 				6DC4A9ED1A433C5F007CEC75 /* 52.png in Resources */,
