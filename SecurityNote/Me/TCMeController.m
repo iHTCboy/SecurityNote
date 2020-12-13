@@ -128,8 +128,16 @@ NSTimer * timer;
     }
     
     
-    return 25;
+    return 35;
 }
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [UIView new];
+    view.backgroundColor = UIColor.clearColor;
+    return view;
+}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -196,7 +204,7 @@ NSTimer * timer;
         
         
         // 设置收件人列表
-        [mail setToRecipients:@[@"ihetianchong@qq.com"]];
+        [mail setToRecipients:@[@"iHTCTeam@gmail.com"]];
         
         
 //        // 设置抄送人列表
@@ -229,7 +237,7 @@ NSTimer * timer;
             [SKStoreReviewController requestReview];
             
         } else {
-            NSURL *url  = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8&action=write-review"];
+            NSURL *url  = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8"];//&action=write-review"];
             [[UIApplication sharedApplication] openURL:url];
         }
     }
@@ -338,7 +346,7 @@ NSTimer * timer;
         MFMessageComposeViewController *mess = [[MFMessageComposeViewController alloc] init];
         
         // 设置短信内容
-        mess.body = @"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用啊！包你惊喜！";
+        mess.body = @"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用吧！你一定会喜欢！";
         
         // 设置收件人列表
         //mess.recipients = @[@"joonsheng.htc@icloud.com"];
@@ -359,7 +367,7 @@ NSTimer * timer;
         // 设置邮件主题
         [mail setSubject:@"亲，快来下载密记试试啊！"];
         // 设置邮件内容
-        [mail setMessageBody:@"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用啊！包你惊喜！" isHTML:NO];
+        [mail setMessageBody:@"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用啊！你一定会喜欢！" isHTML:NO];
         
         // 设置代理
         mail.mailComposeDelegate = self;

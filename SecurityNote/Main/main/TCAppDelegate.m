@@ -16,12 +16,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [self setupUI];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
+    self.window.backgroundColor = TCCoror(51, 149, 253);//[UIColor whiteColor];
+
     
 //    NSString *key = @"CFBundleShortVersionString";
 //    
@@ -59,6 +59,26 @@
     [self.window makeKeyAndVisible];
     return YES;
 
+}
+
+- (void)setupUI {
+    
+    UINavigationBar *appearance = [UINavigationBar appearance];
+    appearance.tintColor = UIColor.whiteColor;
+    appearance.titleTextAttributes = @{NSForegroundColorAttributeName: UIColor.whiteColor};
+    appearance.barTintColor = TCCoror(51, 149, 253);
+    
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance * navBarAppearance = [UINavigationBarAppearance new];
+        [navBarAppearance configureWithOpaqueBackground];
+        navBarAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: UIColor.whiteColor};
+        navBarAppearance.largeTitleTextAttributes = @{NSForegroundColorAttributeName: UIColor.whiteColor};
+        navBarAppearance.backgroundColor = TCCoror(51, 149, 253);
+        appearance.standardAppearance = navBarAppearance;
+        appearance.scrollEdgeAppearance = navBarAppearance;
+    }
+    
+    [UIApplication.sharedApplication setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 

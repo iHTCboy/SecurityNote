@@ -33,11 +33,14 @@ NSString * turnNowDate;
         
         self.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, 256);
         
-        self.backgroundColor = [UIColor whiteColor];
+        if (@available(iOS 13.0, *)) {
+            self.backgroundColor = [UIColor systemBackgroundColor];
+        } else {
+            self.backgroundColor = [UIColor whiteColor];
+            self.alpha = 0.9;
+        }
         
-        self.alpha = 0.9;
-        
-        datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0, 25,self.viewFrame.size.width, 216)];
+        datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 25,self.viewFrame.size.width, 216)];
         
         datePicker.backgroundColor = [UIColor clearColor];
         
@@ -45,7 +48,9 @@ NSString * turnNowDate;
         
         datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
          //@"en_US"
-        
+        if (@available(iOS 13.4, *))  {
+            datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+        }
         
         //设置最小时间
         //datePicker.minimumDate = [NSDate date];

@@ -1,3 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "iNote";
+NSCameraUsageDescription = "Allows the use of camera functions for setting avatars.";
+NSPhotoLibraryUsageDescription = "Allow access to photo albums for setting avatars.";

@@ -18,7 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
     if (@available(iOS 11.0, *)) {
         self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
     }
@@ -50,7 +54,6 @@
     thank.font = [UIFont systemFontOfSize:21];
     [self.view addSubview:thank];
     
-    
     UILabel * user = [[UILabel alloc]init];
     user.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.55);
     user.bounds = CGRectMake(0, 0,280, 80);
@@ -60,6 +63,10 @@
     user.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:user];
     
+    if (@available(iOS 13.0, *)) {
+        thank.textColor = UIColor.secondaryLabelColor;
+        user.textColor = UIColor.tertiaryLabelColor;
+    }
     
     UIButton * goUrl = [[UIButton alloc]init];
     goUrl.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.7);
@@ -76,24 +83,13 @@
     [self.view addSubview:goUrl];
 
     
-    
-    UILabel * htc = [[UILabel alloc]init];
-    htc.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.96);
-    htc.bounds = CGRectMake(0, 0, 250, 80);
-    htc.text = @"@iHTCboy All Rights";
-    htc.textAlignment = NSTextAlignmentCenter;
-    htc.textColor = TCCoror(147, 147, 147);
-    htc.font = [UIFont systemFontOfSize:12];
-    [self.view addSubview:htc];
-    
-    
     UILabel * rights = [[UILabel alloc]init];
-    rights.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.98);
-    rights.bounds = CGRectMake(0, 0, 250, 80);
+    rights.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.96);
+    rights.bounds = CGRectMake(0, 0, self.view.bounds.size.width, 80);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy"];
     NSString *yearString = [formatter stringFromDate:[NSDate date]];
-    rights.text = [NSString stringWithFormat:@"©2014-%@ iNotes @iHTCboy All rights reserved", yearString];
+    rights.text = [NSString stringWithFormat:@"©2014-%@ iNote @iHTCboy All rights reserved", yearString];
     rights.textAlignment = NSTextAlignmentCenter;
     rights.textColor = TCCoror(147, 147, 147);
     rights.font = [UIFont systemFontOfSize:11];

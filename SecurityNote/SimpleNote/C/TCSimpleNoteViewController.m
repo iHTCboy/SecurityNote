@@ -54,14 +54,23 @@
     }
     
     //列表
-    UITableView * simpleTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 10) style:UITableViewStylePlain];
+    UITableView * simpleTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height + 10) style:UITableViewStylePlain];
     simpleTable.separatorColor = TCCoror(51, 149, 253);
+    simpleTable.contentInset = UIEdgeInsetsMake(-6, 0, 100, 0);
     //simpleTable.separatorInset = UIEdgeInsetsMake(0, -100, 0, 0);
     simpleTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     simpleTable.delegate = self;
     simpleTable.dataSource = self;
     self.simpleTable = simpleTable;
     [self.view addSubview:simpleTable];
+    
+    simpleTable.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = @{@"tableView": simpleTable};
+    NSArray *widthConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[tableView]-0-|" options:0 metrics:nil views:views];
+    NSArray *heightConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|" options:0 metrics:nil views:views];
+    [NSLayoutConstraint activateConstraints:widthConstraints];
+    [NSLayoutConstraint activateConstraints:heightConstraints];
+
 
     CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
     //增加按钮
@@ -74,6 +83,12 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panView:)];
     [self.addBtn addGestureRecognizer:pan];
     
+    addBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *addViews = NSDictionaryOfVariableBindings(addBtn);
+    NSArray *addWidthConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[addBtn(>=48,<=60)]-20-|" options:0 metrics:nil views:addViews];
+    NSArray *addHeightConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[addBtn(>=48,<=60)]-120-|" options:0 metrics:nil views:addViews];
+    [NSLayoutConstraint activateConstraints:addWidthConstraints];
+    [NSLayoutConstraint activateConstraints:addHeightConstraints];
     
     //查询数据库，获取数据库全部的记录
     self.noteDatas = [self.TCnote queryWithData];
@@ -218,8 +233,10 @@
     UITableViewCell * cell  = [tableView dequeueReusableCellWithIdentifier:simpleID];
     if (cell == nil)
     {
-        cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleID];
-    
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleID];
+        if (@available(iOS 13.0, *)) {
+            cell.backgroundColor = [UIColor secondarySystemGroupedBackgroundColor];
+        }
     }
     
     //cell被选中的颜色
@@ -250,6 +267,15 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 
 //列表的编辑模式
@@ -262,18 +288,23 @@
         self.addBtn.hidden = YES;
         
         //!!!!暂时通过刷新更新 移动图标
-        [self.simpleTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
 
         self.editMode = 1;
-        [self.simpleTable setEditing:YES animated:YES];
-        
+        //让table进入编辑模式。你可以通过一个按钮来控制进入还是退出编辑模式
+        [tableView setEditing:YES animated:YES];
+//
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEdit)];
-        
+
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finishEdit)];
         
-        //刷新列表
-        //[tableView reloadData];
-        [self.simpleTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [tableView setEditing:YES animated:YES];
+        });
+//
+//        //刷新列表
+//        //[tableView reloadData];
+//        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
 
     }
     
@@ -536,6 +567,8 @@
 //列表的选择项
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     self.nowIndexPath = indexPath;
     
     self.TCnote = self.noteDatas[[indexPath section]];
@@ -596,47 +629,49 @@
 
 
 //每个分区的列表底部的大小
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 6;
+    return 10;
 
 }
 
 
 //列表的底部颜色
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView * colorView = [[UIView alloc]init];
     colorView.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:252/255.0 alpha:0.8];
     return colorView;
 }
 
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView
-{
-     static float newY = 0;
-
-     newY = scrollView.contentOffset.y;
-    
-    if (newY != _oldY)
-    {
-        //向下滚动
-        if (newY > _oldY && (newY - _oldY) > 0)
-        {
-            //TCLog(@"%f",(_oldY - newY));
-            self.tabBarController.tabBar.hidden = YES;
-            self.simpleTable.frame = CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 50);
-            _oldY = newY;
-            
-        }
-        else if (newY < _oldY && (_oldY - newY) > 100)
-        {
-            
-            self.tabBarController.tabBar.hidden = NO;
-            self.simpleTable.frame = CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 10);
-            _oldY = newY;
-        }
-    
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//     static float newY = 0;
+//
+//     newY = scrollView.contentOffset.y;
+//
+//    if (newY != _oldY)
+//    {
+//        //向下滚动
+//        if (newY > _oldY && (newY - _oldY) > 0)
+//        {
+//            //TCLog(@"%f",(_oldY - newY));
+//            //self.tabBarController.tabBar.hidden = YES;
+//            self.simpleTable.frame = CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 50);
+//            _oldY = newY;
+//
+//        }
+//        else if (newY < _oldY && (_oldY - newY) > 100)
+//        {
+//
+//            //self.tabBarController.tabBar.hidden = NO;
+//            self.simpleTable.frame = CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height + 10);
+//            _oldY = newY;
+//        }
+//
+//    }
+//}
 
 @end

@@ -29,8 +29,13 @@
         self.viewFrame = frame;
         
         self.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, 256);
-        self.backgroundColor = [UIColor whiteColor];
-        self.alpha = 0.9;
+
+        if (@available(iOS 13.0, *)) {
+            self.backgroundColor = [UIColor systemBackgroundColor];
+        } else {
+            self.backgroundColor = [UIColor whiteColor];
+            self.alpha = 0.9;
+        }
         
         UIPickerView * yearPicker = [[UIPickerView alloc]initWithFrame:CGRectMake(0, 25,self.viewFrame.size.width, 216)];
      

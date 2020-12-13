@@ -17,8 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
     if (@available(iOS 11.0, *)) {
         self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeNever;
     }
@@ -33,6 +37,9 @@
     
     
     UILabel * name = [[UILabel alloc]init];
+    if (@available(iOS 13.0, *)) {
+        name.textColor = UIColor.labelColor;
+    }
     name.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.45);
     name.bounds = CGRectMake(0, 0, self.view.frame.size.width, 80);
     name.text = @"密记";
@@ -42,10 +49,13 @@
     
     
     UILabel * version = [[UILabel alloc]init];
+    if (@available(iOS 13.0, *)) {
+        version.textColor = UIColor.secondaryLabelColor;
+    }
     version.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.49);
     version.bounds = CGRectMake(0, 0, self.view.frame.size.width, 80);
     NSString *lastVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    version.text = [NSString stringWithFormat:@"密记iPhone版%@",lastVersion];
+    version.text = [NSString stringWithFormat:@"密记 %@",lastVersion];
     version.textAlignment = NSTextAlignmentCenter;
     version.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:version];
@@ -66,7 +76,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy"];
     NSString *yearString = [formatter stringFromDate:[NSDate date]];
-    rights.text = [NSString stringWithFormat:@"©2014-%@ iNotes @iHTCboy All rights reserved", yearString];
+    rights.text = [NSString stringWithFormat:@"©2014-%@ iNote @iHTCboy All rights reserved", yearString];
     rights.textAlignment = NSTextAlignmentCenter;
     rights.textColor = TCCoror(147, 147, 147);
     rights.font = [UIFont systemFontOfSize:11];

@@ -52,16 +52,29 @@
     self.diaryTable = dairyTab;
     [self.view addSubview:dairyTab];
     
+    dairyTab.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = @{@"tableView": dairyTab};
+    NSArray *widthConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[tableView]-0-|" options:0 metrics:nil views:views];
+    NSArray *heightConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|" options:0 metrics:nil views:views];
+    [NSLayoutConstraint activateConstraints:widthConstraints];
+    [NSLayoutConstraint activateConstraints:heightConstraints];
+    
     CGFloat top = (MACRO_IS_IPHONE_X ? 150 : 120);
-    UIButton * add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - top,  48, 48)];
-    [add setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
-    [add addTarget:self action:@selector(addNew:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:add];
-    self.addBtn = add;
+    UIButton * addBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, self.view.frame.size.height - top,  48, 48)];
+    [addBtn setImage:[UIImage imageNamed:@"blue.png"] forState:UIControlStateNormal];
+    [addBtn addTarget:self action:@selector(addNew:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addBtn];
+    self.addBtn = addBtn;
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panView:)];
     [self.addBtn addGestureRecognizer:pan];
     
+    addBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *addViews = NSDictionaryOfVariableBindings(addBtn);
+    NSArray *addWidthConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[addBtn(>=48,<=60)]-20-|" options:0 metrics:nil views:addViews];
+    NSArray *addHeightConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[addBtn(>=48,<=60)]-120-|" options:0 metrics:nil views:addViews];
+    [NSLayoutConstraint activateConstraints:addWidthConstraints];
+    [NSLayoutConstraint activateConstraints:addHeightConstraints];
     
     self.diaryLists = [self.diaryNote queryWithNote];
     
@@ -159,9 +172,10 @@
 
     if (cell == nil)
     {
-        cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
-                                    reuseIdentifier:diaryID];
-        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:diaryID];
+        if (@available(iOS 13.0, *)) {
+            cell.backgroundColor = [UIColor secondarySystemGroupedBackgroundColor];
+        }
     }
     
 
