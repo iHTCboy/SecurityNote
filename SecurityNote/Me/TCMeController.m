@@ -11,6 +11,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "TCAbutSNoteViewController.h"
 #import "TCHelpViewController.h"
+#import "TCRewardTableViewController.h"
 
 #import <StoreKit/StoreKit.h>
 #import <SafariServices/SafariServices.h>
@@ -230,7 +231,7 @@ NSTimer * timer;
         
     }
     
-    //评价
+    // 应用内评价
     if ([indexPath section] == 1 && [indexPath row] == 3)
     {
         if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.3) {
@@ -242,22 +243,31 @@ NSTimer * timer;
         }
     }
     
+    // 商店评估
     if ([indexPath section] == 1 && [indexPath row] == 4)
     {
         [self openWebView:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8"];
     }
     
+    //打赏开发者
     if ([indexPath section] == 1 && [indexPath row] == 5) {
+        TCRewardTableViewController *rewardVC = [[TCRewardTableViewController alloc] init];
+        rewardVC.title = [[[[tableView cellForRowAtIndexPath:indexPath] contentView] subviews][0] text];
+        self.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:rewardVC animated:YES];
+    }
+    
+    //用户协助
+    if ([indexPath section] == 1 && [indexPath row] == 6) {
         [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
     }
     
     //关于密记
-    if ([indexPath section] == 1 && [indexPath row] == 6)
+    if ([indexPath section] == 1 && [indexPath row] == 7)
     {
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:about animated:YES];
-        self.hidesBottomBarWhenPushed = NO;
     }
     
 }

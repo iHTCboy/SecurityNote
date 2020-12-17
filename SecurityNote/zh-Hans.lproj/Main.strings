@@ -5,8 +5,8 @@
 /* Class = "UILabel"; text = "应用内评分"; ObjectID = "Ciz-Na-aCR"; */
 "Ciz-Na-aCR.text" = "应用内评分";
 
-/* Class = "UILabel"; text = "用户条款"; ObjectID = "EaW-xJ-Gk2"; */
-"EaW-xJ-Gk2.text" = "用户条款";
+/* Class = "UILabel"; text = "打赏开发者"; ObjectID = "EaW-xJ-Gk2"; */
+"EaW-xJ-Gk2.text" = "打赏开发者";
 
 /* Class = "UINavigationItem"; title = "简记"; ObjectID = "Jec-WA-VNz"; */
 "Jec-WA-VNz.title" = "简记";
@@ -20,14 +20,17 @@
 /* Class = "UILabel"; text = "反馈"; ObjectID = "R4I-ry-wSI"; */
 "R4I-ry-wSI.text" = "反馈";
 
-/* Class = "UILabel"; text = "关于密记"; ObjectID = "YGf-Uh-cnQ"; */
-"YGf-Uh-cnQ.text" = "关于密记";
+/* Class = "UILabel"; text = "用户条款"; ObjectID = "YGf-Uh-cnQ"; */
+"YGf-Uh-cnQ.text" = "用户条款";
 
 /* Class = "UILabel"; text = "推荐好友"; ObjectID = "ZpW-4O-ass"; */
 "ZpW-4O-ass.text" = "推荐好友";
 
 /* Class = "UILabel"; text = "AppStore评价"; ObjectID = "a2Q-VE-DeO"; */
 "a2Q-VE-DeO.text" = "AppStore评价";
+
+/* Class = "UILabel"; text = "关于密记"; ObjectID = "ehG-D1-hRQ"; */
+"ehG-D1-hRQ.text" = "关于密记";
 
 /* Class = "UILabel"; text = "帮助"; ObjectID = "g7P-Sw-9TS"; */
 "g7P-Sw-9TS.text" = "帮助";
@@ -47,14 +50,8 @@
 /* Class = "UITextField"; text = "密语"; ObjectID = "ptX-aH-CKa"; */
 "ptX-aH-CKa.text" = "密语";
 
-/* Class = "UITableViewSection"; footerTitle = "   "; ObjectID = "qxm-KJ-75T"; */
-"qxm-KJ-75T.footerTitle" = "   ";
-
 /* Class = "UINavigationItem"; title = "我"; ObjectID = "sez-WJ-JS4"; */
 "sez-WJ-JS4.title" = "我";
-
-/* Class = "UITableViewSection"; footerTitle = "  "; ObjectID = "uZh-fE-zuW"; */
-"uZh-fE-zuW.footerTitle" = "  ";
 
 /* Class = "UITabBarItem"; title = "密记"; ObjectID = "w57-Ny-63a"; */
 "w57-Ny-63a.title" = "密记";
