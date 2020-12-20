@@ -1,4 +1,7 @@
 
+/* Class = "UILabel"; text = "密码设置"; ObjectID = "3CN-hv-OkA"; */
+"3CN-hv-OkA.text" = "Password setting";
+
 /* Class = "UINavigationController"; title = "日记"; ObjectID = "APM-SF-wH8"; */
 "APM-SF-wH8.title" = "DIARY";
 

@@ -70,6 +70,23 @@
 		6D68CAEF19D8292C00892D62 /* TCDiaryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D68CAEE19D8292C00892D62 /* TCDiaryTool.m */; };
 		6D6EA01E19DAB543009CAA64 /* SecurityNote.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6D6EA01D19DAB543009CAA64 /* SecurityNote.sqlite */; };
 		6D940369199FB2EA001E83CA /* TCDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D940368199FB2EA001E83CA /* TCDatePickerView.m */; };
+		6D946893258F9EE9007C078A /* DYFAuthIDAndGestureLockSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94686A258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsController.m */; };
+		6D946894258F9EE9007C078A /* DYFAuthIDAndGestureLockSettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94686E258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsCell.m */; };
+		6D946895258F9EE9007C078A /* DYFAppLockConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94686F258F9EE8007C078A /* DYFAppLockConstant.m */; };
+		6D946896258F9EE9007C078A /* UIViewController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946873258F9EE8007C078A /* UIViewController+Message.m */; };
+		6D946897258F9EE9007C078A /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946874258F9EE8007C078A /* UIView+Ext.m */; };
+		6D946898258F9EE9007C078A /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946875258F9EE8007C078A /* UIButton+EdgeInsets.m */; };
+		6D946899258F9EE9007C078A /* UIImage+Circular.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946876258F9EE8007C078A /* UIImage+Circular.m */; };
+		6D94689A258F9EE9007C078A /* CALayer+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94687A258F9EE8007C078A /* CALayer+Shake.m */; };
+		6D94689B258F9EE9007C078A /* DYFSecurityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94687D258F9EE8007C078A /* DYFSecurityHelper.m */; };
+		6D94689C258F9EE9007C078A /* DYFGestureSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946881258F9EE8007C078A /* DYFGestureSettingsController.m */; };
+		6D94689D258F9EE9007C078A /* DYFCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946886258F9EE9007C078A /* DYFCircleView.m */; };
+		6D94689E258F9EE9007C078A /* DYFGestureShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946887258F9EE9007C078A /* DYFGestureShapeView.m */; };
+		6D94689F258F9EE9007C078A /* DYFGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946888258F9EE9007C078A /* DYFGestureView.m */; };
+		6D9468A0258F9EE9007C078A /* DYFAuthIDAndGestureLock.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D94688C258F9EE9007C078A /* DYFAuthIDAndGestureLock.bundle */; };
+		6D9468A1258F9EE9007C078A /* DYFAuthenticationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D94688F258F9EE9007C078A /* DYFAuthenticationView.m */; };
+		6D9468A2258F9EE9007C078A /* DYFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D946891258F9EE9007C078A /* DYFBaseViewController.m */; };
+		6D9468A6258FA118007C078A /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D9468A5258FA117007C078A /* password@2x.png */; };
 		6D99210019D0484F00FBB62D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9920FF19D0484F00FBB62D /* libsqlite3.dylib */; };
 		6D99210419D048CC00FBB62D /* TCSimpleNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D99210319D048CC00FBB62D /* TCSimpleNote.m */; };
 		6D99210819D048ED00FBB62D /* TCSimpleNoteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D99210719D048ED00FBB62D /* TCSimpleNoteTool.m */; };
@@ -193,7 +210,6 @@
 		6D4BF15019D98FC900818EB5 /* TCEditDiaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCEditDiaryView.h; sourceTree = "<group>"; };
 		6D4BF15119D98FC900818EB5 /* TCEditDiaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCEditDiaryView.m; sourceTree = "<group>"; };
 		6D4D27FF258BA4570004CCE3 /* reward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reward@2x.png"; sourceTree = "<group>"; };
-		6D4D2804258BA5AB0004CCE3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6D4D2807258BA76C0004CCE3 /* TCRewardTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRewardTableViewController.h; sourceTree = "<group>"; };
 		6D4D2808258BA76C0004CCE3 /* TCRewardTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRewardTableViewController.m; sourceTree = "<group>"; };
 		6D52A2E719DC05EE003F0004 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
@@ -218,10 +234,45 @@
 		6D68CAED19D8292C00892D62 /* TCDiaryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDiaryTool.h; sourceTree = "<group>"; };
 		6D68CAEE19D8292C00892D62 /* TCDiaryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDiaryTool.m; sourceTree = "<group>"; };
 		6D6EA01D19DAB543009CAA64 /* SecurityNote.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SecurityNote.sqlite; sourceTree = "<group>"; };
+		6D6EDCFE258FA208001A1B2B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6D7A6A401B30817B0001E337 /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libReveal.dylib; path = "../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/libReveal.dylib"; sourceTree = "<group>"; };
 		6D7A6A411B30817B0001E337 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 		6D940367199FB2EA001E83CA /* TCDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatePickerView.h; sourceTree = "<group>"; };
 		6D940368199FB2EA001E83CA /* TCDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatePickerView.m; sourceTree = "<group>"; };
+		6D946867258F9EE8007C078A /* DYFAppLockDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAppLockDefines.h; sourceTree = "<group>"; };
+		6D94686A258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFAuthIDAndGestureLockSettingsController.m; sourceTree = "<group>"; };
+		6D94686B258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAuthIDAndGestureLockSettingsController.h; sourceTree = "<group>"; };
+		6D94686D258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAuthIDAndGestureLockSettingsCell.h; sourceTree = "<group>"; };
+		6D94686E258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFAuthIDAndGestureLockSettingsCell.m; sourceTree = "<group>"; };
+		6D94686F258F9EE8007C078A /* DYFAppLockConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFAppLockConstant.m; sourceTree = "<group>"; };
+		6D946871258F9EE8007C078A /* UIImage+Circular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circular.h"; sourceTree = "<group>"; };
+		6D946872258F9EE8007C078A /* CALayer+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Shake.h"; sourceTree = "<group>"; };
+		6D946873258F9EE8007C078A /* UIViewController+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Message.m"; sourceTree = "<group>"; };
+		6D946874258F9EE8007C078A /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		6D946875258F9EE8007C078A /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
+		6D946876258F9EE8007C078A /* UIImage+Circular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circular.m"; sourceTree = "<group>"; };
+		6D946877258F9EE8007C078A /* UIButton+EdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EdgeInsets.h"; sourceTree = "<group>"; };
+		6D946878258F9EE8007C078A /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		6D946879258F9EE8007C078A /* UIViewController+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Message.h"; sourceTree = "<group>"; };
+		6D94687A258F9EE8007C078A /* CALayer+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Shake.m"; sourceTree = "<group>"; };
+		6D94687C258F9EE8007C078A /* DYFSecurityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFSecurityHelper.h; sourceTree = "<group>"; };
+		6D94687D258F9EE8007C078A /* DYFSecurityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFSecurityHelper.m; sourceTree = "<group>"; };
+		6D946880258F9EE8007C078A /* DYFGestureSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureSettingsController.h; sourceTree = "<group>"; };
+		6D946881258F9EE8007C078A /* DYFGestureSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureSettingsController.m; sourceTree = "<group>"; };
+		6D946883258F9EE9007C078A /* DYFCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFCircleView.h; sourceTree = "<group>"; };
+		6D946884258F9EE9007C078A /* DYFGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureView.h; sourceTree = "<group>"; };
+		6D946885258F9EE9007C078A /* DYFGestureShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFGestureShapeView.h; sourceTree = "<group>"; };
+		6D946886258F9EE9007C078A /* DYFCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFCircleView.m; sourceTree = "<group>"; };
+		6D946887258F9EE9007C078A /* DYFGestureShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureShapeView.m; sourceTree = "<group>"; };
+		6D946888258F9EE9007C078A /* DYFGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFGestureView.m; sourceTree = "<group>"; };
+		6D946889258F9EE9007C078A /* DYFAppLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAppLock.h; sourceTree = "<group>"; };
+		6D94688A258F9EE9007C078A /* DYFAppLockConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAppLockConstant.h; sourceTree = "<group>"; };
+		6D94688C258F9EE9007C078A /* DYFAuthIDAndGestureLock.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DYFAuthIDAndGestureLock.bundle; sourceTree = "<group>"; };
+		6D94688E258F9EE9007C078A /* DYFAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFAuthenticationView.h; sourceTree = "<group>"; };
+		6D94688F258F9EE9007C078A /* DYFAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFAuthenticationView.m; sourceTree = "<group>"; };
+		6D946891258F9EE9007C078A /* DYFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFBaseViewController.m; sourceTree = "<group>"; };
+		6D946892258F9EE9007C078A /* DYFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFBaseViewController.h; sourceTree = "<group>"; };
+		6D9468A5258FA117007C078A /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
 		6D9920FF19D0484F00FBB62D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6D99210219D048CC00FBB62D /* TCSimpleNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSimpleNote.h; sourceTree = "<group>"; };
 		6D99210319D048CC00FBB62D /* TCSimpleNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSimpleNote.m; sourceTree = "<group>"; };
@@ -342,6 +393,7 @@
 		6D2C0F7E2157E5A900C37783 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				6D9468A5258FA117007C078A /* password@2x.png */,
 				6D4D27FF258BA4570004CCE3 /* reward@2x.png */,
 				6D06A3A6227D354700606D2A /* appstore@2x.png */,
 				6D195B541EBB7DD50081D227 /* Evaluate@2x.png */,
@@ -389,6 +441,7 @@
 		6D2C0F842157EAEC00C37783 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				6D946866258F9EE8007C078A /* DYFAuthIDAndGestureLock */,
 				6D2C0F9C2157F24C00C37783 /* baidu_ios_api */,
 				6D2C0F9F2157F24C00C37783 /* fmdb */,
 				6D2C0F962157F24C00C37783 /* MBProgressHUD */,
@@ -505,6 +558,134 @@
 				6D2C0FAA2157F24C00C37783 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		6D946866258F9EE8007C078A /* DYFAuthIDAndGestureLock */ = {
+			isa = PBXGroup;
+			children = (
+				6D946867258F9EE8007C078A /* DYFAppLockDefines.h */,
+				6D946868258F9EE8007C078A /* Settings */,
+				6D94686F258F9EE8007C078A /* DYFAppLockConstant.m */,
+				6D946870258F9EE8007C078A /* Category */,
+				6D94687B258F9EE8007C078A /* Utils */,
+				6D94687E258F9EE8007C078A /* Gesture */,
+				6D946889258F9EE9007C078A /* DYFAppLock.h */,
+				6D94688A258F9EE9007C078A /* DYFAppLockConstant.h */,
+				6D94688B258F9EE9007C078A /* Resource */,
+				6D94688D258F9EE9007C078A /* Authentication */,
+				6D946890258F9EE9007C078A /* Base */,
+			);
+			path = DYFAuthIDAndGestureLock;
+			sourceTree = "<group>";
+		};
+		6D946868258F9EE8007C078A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6D946869258F9EE8007C078A /* Controller */,
+				6D94686C258F9EE8007C078A /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6D946869258F9EE8007C078A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D94686B258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsController.h */,
+				6D94686A258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D94686C258F9EE8007C078A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D94686D258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsCell.h */,
+				6D94686E258F9EE8007C078A /* DYFAuthIDAndGestureLockSettingsCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D946870258F9EE8007C078A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6D946871258F9EE8007C078A /* UIImage+Circular.h */,
+				6D946872258F9EE8007C078A /* CALayer+Shake.h */,
+				6D946873258F9EE8007C078A /* UIViewController+Message.m */,
+				6D946874258F9EE8007C078A /* UIView+Ext.m */,
+				6D946875258F9EE8007C078A /* UIButton+EdgeInsets.m */,
+				6D946876258F9EE8007C078A /* UIImage+Circular.m */,
+				6D946877258F9EE8007C078A /* UIButton+EdgeInsets.h */,
+				6D946878258F9EE8007C078A /* UIView+Ext.h */,
+				6D946879258F9EE8007C078A /* UIViewController+Message.h */,
+				6D94687A258F9EE8007C078A /* CALayer+Shake.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		6D94687B258F9EE8007C078A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D94687C258F9EE8007C078A /* DYFSecurityHelper.h */,
+				6D94687D258F9EE8007C078A /* DYFSecurityHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6D94687E258F9EE8007C078A /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				6D94687F258F9EE8007C078A /* Controller */,
+				6D946882258F9EE8007C078A /* View */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		6D94687F258F9EE8007C078A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6D946880258F9EE8007C078A /* DYFGestureSettingsController.h */,
+				6D946881258F9EE8007C078A /* DYFGestureSettingsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6D946882258F9EE8007C078A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D946883258F9EE9007C078A /* DYFCircleView.h */,
+				6D946884258F9EE9007C078A /* DYFGestureView.h */,
+				6D946885258F9EE9007C078A /* DYFGestureShapeView.h */,
+				6D946886258F9EE9007C078A /* DYFCircleView.m */,
+				6D946887258F9EE9007C078A /* DYFGestureShapeView.m */,
+				6D946888258F9EE9007C078A /* DYFGestureView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D94688B258F9EE9007C078A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6D94688C258F9EE9007C078A /* DYFAuthIDAndGestureLock.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6D94688D258F9EE9007C078A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				6D94688E258F9EE9007C078A /* DYFAuthenticationView.h */,
+				6D94688F258F9EE9007C078A /* DYFAuthenticationView.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		6D946890258F9EE9007C078A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6D946891258F9EE9007C078A /* DYFBaseViewController.m */,
+				6D946892258F9EE9007C078A /* DYFBaseViewController.h */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		6DA664EE218EF0E8001652D6 /* Main */ = {
@@ -820,6 +1001,7 @@
 				6D52A2F819DC08E8003F0004 /* baiwan11.png in Resources */,
 				6D52A2FC19DC08E8003F0004 /* we.png in Resources */,
 				6D09E4B6199CB6F600CEA8B3 /* Main.storyboard in Resources */,
+				6D9468A6258FA118007C078A /* password@2x.png in Resources */,
 				6D52A2EB19DC05EE003F0004 /* list@2x.png in Resources */,
 				6D52A2F919DC08E8003F0004 /* janji.png in Resources */,
 				6D2C0FAD2157F24C00C37783 /* MBProgressHUD.bundle in Resources */,
@@ -854,6 +1036,7 @@
 				6DC4A9F61A433CE8007CEC75 /* 44.png in Resources */,
 				6D4D2800258BA4570004CCE3 /* reward@2x.png in Resources */,
 				6D6EA01E19DAB543009CAA64 /* SecurityNote.sqlite in Resources */,
+				6D9468A0258F9EE9007C078A /* DYFAuthIDAndGestureLock.bundle in Resources */,
 				6DC4A9E31A433A59007CEC75 /* 6p4.png in Resources */,
 				6DC4A9C91A4335B2007CEC75 /* messge@2x.png in Resources */,
 				6D52A2FB19DC08E8003F0004 /* janji@3x.png in Resources */,
@@ -877,33 +1060,48 @@
 			files = (
 				6D195B431EBB7A760081D227 /* DHDeviceUtil.m in Sources */,
 				6DC36444199886B6008A9CDE /* TCViewController.m in Sources */,
+				6D9468A1258F9EE9007C078A /* DYFAuthenticationView.m in Sources */,
 				6DF62184199E1C780026026C /* TCAddSimpleNoteViewController.m in Sources */,
 				6D04E1D3199DB87D004731BD /* TCSimpleNoteViewController.m in Sources */,
 				6D172EDB19DA4626004E0B96 /* TCEditMemoViewController.m in Sources */,
 				6D68CAEC19D8290200892D62 /* TCDiary.m in Sources */,
 				6D09BA65199F0B1B009363FF /* TCAddMemoViewController.m in Sources */,
+				6D94689F258F9EE9007C078A /* DYFGestureView.m in Sources */,
 				6D2C0FB22157F24C00C37783 /* FMDatabasePool.m in Sources */,
 				6D6489C419DD4479008A69D0 /* TCShowViewController.m in Sources */,
+				6D946895258F9EE9007C078A /* DYFAppLockConstant.m in Sources */,
 				6D2C0FB12157F24C00C37783 /* FMDatabase.m in Sources */,
+				6D946897258F9EE9007C078A /* UIView+Ext.m in Sources */,
 				6D19B8D419DC553600EBBEBC /* TCAbutSNoteViewController.m in Sources */,
 				6D2C0FB32157F24C00C37783 /* FMResultSet.m in Sources */,
 				6D071E871999B14B003A9F8D /* TCMeController.m in Sources */,
+				6D946896258F9EE9007C078A /* UIViewController+Message.m in Sources */,
 				6D68CAEF19D8292C00892D62 /* TCDiaryTool.m in Sources */,
 				6D04E1DD199DECF7004731BD /* TCAddDiaryViewController.m in Sources */,
+				6D94689A258F9EE9007C078A /* CALayer+Shake.m in Sources */,
 				6D940369199FB2EA001E83CA /* TCDatePickerView.m in Sources */,
 				6D3B105619DA697600B00A86 /* TCYearPickerView.m in Sources */,
 				6D4BF15219D98FC900818EB5 /* TCEditDiaryView.m in Sources */,
 				6DC3643A199886B6008A9CDE /* main.m in Sources */,
 				6D172EDE19DA4640004E0B96 /* TCMemo.m in Sources */,
+				6D946894258F9EE9007C078A /* DYFAuthIDAndGestureLockSettingsCell.m in Sources */,
 				6D2C0FAB2157F24C00C37783 /* MBProgressHUD.m in Sources */,
+				6D94689C258F9EE9007C078A /* DYFGestureSettingsController.m in Sources */,
 				6D2C0FAC2157F24C00C37783 /* MBProgressHUD+MJ.m in Sources */,
+				6D94689B258F9EE9007C078A /* DYFSecurityHelper.m in Sources */,
 				6D2C0FB02157F24C00C37783 /* FMDatabaseAdditions.m in Sources */,
 				6D99210419D048CC00FBB62D /* TCSimpleNote.m in Sources */,
+				6D946893258F9EE9007C078A /* DYFAuthIDAndGestureLockSettingsController.m in Sources */,
 				6D04E1D6199DB89F004731BD /* TCMeMoViewController.m in Sources */,
+				6D94689D258F9EE9007C078A /* DYFCircleView.m in Sources */,
 				6D99210819D048ED00FBB62D /* TCSimpleNoteTool.m in Sources */,
 				6D19B8D919DC64A300EBBEBC /* TCHelpViewController.m in Sources */,
 				6D4D2809258BA76C0004CCE3 /* TCRewardTableViewController.m in Sources */,
 				6D172EE119DA464D004E0B96 /* TCMemoTool.m in Sources */,
+				6D94689E258F9EE9007C078A /* DYFGestureShapeView.m in Sources */,
+				6D9468A2258F9EE9007C078A /* DYFBaseViewController.m in Sources */,
+				6D946899258F9EE9007C078A /* UIImage+Circular.m in Sources */,
+				6D946898258F9EE9007C078A /* UIButton+EdgeInsets.m in Sources */,
 				6DC3643E199886B6008A9CDE /* TCAppDelegate.m in Sources */,
 				6D04E1D0199DAEE6004731BD /* TCDiaryViewController.m in Sources */,
 				6D2C0FAF2157F24C00C37783 /* FMDatabaseQueue.m in Sources */,
@@ -934,7 +1132,7 @@
 			children = (
 				6D09E4B5199CB6F600CEA8B3 /* Base */,
 				6DA8390C21908F8E0043BD7B /* en */,
-				6D4D2804258BA5AB0004CCE3 /* zh-Hans */,
+				6D6EDCFE258FA208001A1B2B /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1076,7 +1274,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2020.12.17;
+				CURRENT_PROJECT_VERSION = 2020.12.20;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1087,7 +1285,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 7.6.0;
+				MARKETING_VERSION = 8.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";
@@ -1103,7 +1301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2020.12.17;
+				CURRENT_PROJECT_VERSION = 2020.12.20;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1114,7 +1312,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 7.6.0;
+				MARKETING_VERSION = 8.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";

@@ -1,5 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleDisplayName = "密记";
-NSCameraUsageDescription = "允许使用相机功能，用于设置头像.";
-NSPhotoLibraryUsageDescription = "允许访问相册，用于设置头像.";
+NSCameraUsageDescription = "允许使用相机功能，用于设置头像。";
+NSPhotoLibraryUsageDescription = "允许访问相册，用于设置头像。";
+NSFaceIDUsageDescription = "允许验证Face ID，用于允许App访问。";

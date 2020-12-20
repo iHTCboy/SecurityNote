@@ -44,6 +44,13 @@
     NSData *receiptData=[NSData dataWithContentsOfURL:receiptUrl];
     NSString *receiptString=[receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];//交易凭证转化为base64字符串
     NSLog(@"receiptString: %@", receiptString);
+    
+    // 获取Library/Caches目录
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *txtPath = [cachePath stringByAppendingPathComponent:@"receipt.txt"];
+    // 字符串写入时执行的方法
+    [receiptString ? : @"null" writeToFile:txtPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"txtPath is %@", txtPath);
 }
 
 #pragma mark - Table view data source
@@ -53,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,6 +93,9 @@
         case 1:
             cell.textLabel.text = @"打赏1个鸡腿🍗";
             break;
+        case 2:
+            cell.textLabel.text = @"打赏1杯咖啡☕";
+            break;
         default:
             break;
     }
@@ -104,6 +114,9 @@
             break;
         case 1:
             goodsID = @"com.iHTCboy.iNote.chicken";
+            break;
+        case 2:
+            goodsID = @"com.iHTCboy.iNote.coffee";
             break;
         default:
             break;

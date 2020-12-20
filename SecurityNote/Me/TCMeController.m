@@ -12,6 +12,7 @@
 #import "TCAbutSNoteViewController.h"
 #import "TCHelpViewController.h"
 #import "TCRewardTableViewController.h"
+#import "DYFAuthIDAndGestureLockSettingsController.h"
 
 #import <StoreKit/StoreKit.h>
 #import <SafariServices/SafariServices.h>
@@ -220,8 +221,15 @@ NSTimer * timer;
         
     }
     
+    //密码设置
+    if ([indexPath section] == 1 && [indexPath row] == 2) {
+        DYFAuthIDAndGestureLockSettingsController *vc = [[DYFAuthIDAndGestureLockSettingsController alloc] init];
+        self.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
     //推荐好友
-    if ([indexPath section] == 1 && [indexPath row] == 2)
+    if ([indexPath section] == 1 && [indexPath row] == 3)
     {
         UIActionSheet * sheet = [[UIActionSheet alloc]initWithTitle:@"选择推荐给好友的方式" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"短信",@"邮件", nil];
         sheet.actionSheetStyle = UIActionSheetStyleAutomatic;
@@ -232,7 +240,7 @@ NSTimer * timer;
     }
     
     // 应用内评价
-    if ([indexPath section] == 1 && [indexPath row] == 3)
+    if ([indexPath section] == 1 && [indexPath row] == 4)
     {
         if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.3) {
             [SKStoreReviewController requestReview];
@@ -244,13 +252,13 @@ NSTimer * timer;
     }
     
     // 商店评估
-    if ([indexPath section] == 1 && [indexPath row] == 4)
+    if ([indexPath section] == 1 && [indexPath row] == 5)
     {
         [self openWebView:@"https://itunes.apple.com/cn/app/inotes/id925021570?l=zh&ls=1&mt=8"];
     }
     
     //打赏开发者
-    if ([indexPath section] == 1 && [indexPath row] == 5) {
+    if ([indexPath section] == 1 && [indexPath row] == 6) {
         TCRewardTableViewController *rewardVC = [[TCRewardTableViewController alloc] init];
         rewardVC.title = [[[[tableView cellForRowAtIndexPath:indexPath] contentView] subviews][0] text];
         self.hidesBottomBarWhenPushed = YES;
@@ -258,12 +266,12 @@ NSTimer * timer;
     }
     
     //用户协助
-    if ([indexPath section] == 1 && [indexPath row] == 6) {
+    if ([indexPath section] == 1 && [indexPath row] == 7) {
         [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
     }
     
     //关于密记
-    if ([indexPath section] == 1 && [indexPath row] == 7)
+    if ([indexPath section] == 1 && [indexPath row] == 8)
     {
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
         self.hidesBottomBarWhenPushed = YES;
