@@ -31,10 +31,10 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>允许使用相机功能，用于设置头像。</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>允许访问相册，用于设置头像。</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>允许验证Face ID，用于允许App访问。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>允许访问相册，用于设置头像。</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

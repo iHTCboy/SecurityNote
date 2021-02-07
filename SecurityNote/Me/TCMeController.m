@@ -192,6 +192,16 @@ NSTimer * timer;
     //反馈，通过邮件
     if ([indexPath section] == 1 && [indexPath row] == 1)
     {
+        if (![MFMailComposeViewController canSendMail]) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前设备不支持发送邮件~" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+            return;
+        }
+        
         MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
 
         // 设置邮件主题
@@ -226,6 +236,7 @@ NSTimer * timer;
         DYFAuthIDAndGestureLockSettingsController *vc = [[DYFAuthIDAndGestureLockSettingsController alloc] init];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     
     //推荐好友
@@ -263,6 +274,7 @@ NSTimer * timer;
         rewardVC.title = [[[[tableView cellForRowAtIndexPath:indexPath] contentView] subviews][0] text];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:rewardVC animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     
     //用户协助
@@ -276,6 +288,7 @@ NSTimer * timer;
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
         self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:about animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     
 }
