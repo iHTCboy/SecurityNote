@@ -216,7 +216,7 @@ NSTimer * timer;
         
         
         // 设置收件人列表
-        [mail setToRecipients:@[@"iHTCTeam@gmail.com"]];
+        [mail setToRecipients:@[@"iHTCdevelop@gmail.com"]];
         
         
 //        // 设置抄送人列表

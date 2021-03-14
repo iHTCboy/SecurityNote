@@ -1274,7 +1274,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2021.02.06;
+				CURRENT_PROJECT_VERSION = 2021.03.14;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1285,7 +1285,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 8.0.1;
+				MARKETING_VERSION = 8.1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";
@@ -1301,7 +1301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2021.02.06;
+				CURRENT_PROJECT_VERSION = 2021.03.14;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1312,7 +1312,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 8.0.1;
+				MARKETING_VERSION = 8.1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_NAME = "密记";
