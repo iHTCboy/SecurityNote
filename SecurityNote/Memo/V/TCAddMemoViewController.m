@@ -182,7 +182,7 @@
     self.detailView = detailView;
     self.detailView.delegate = self;
     //初始化
-    detailView.text = @"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    detailView.text = @"\n\n\n\n\n\n\n\n\n";
 
     [self.view addSubview:detailView];
     

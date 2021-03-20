@@ -56,6 +56,9 @@
 /* Class = "UINavigationItem"; title = "我"; ObjectID = "sez-WJ-JS4"; */
 "sez-WJ-JS4.title" = "iNote";
 
+/* Class = "UILabel"; text = "开发者应用"; ObjectID = "tDl-pj-9aT"; */
+"tDl-pj-9aT.text" = "Developer Apps";
+
 /* Class = "UITabBarItem"; title = "密记"; ObjectID = "w57-Ny-63a"; */
 "w57-Ny-63a.title" = "iSecret";
 

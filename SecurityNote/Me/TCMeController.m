@@ -17,6 +17,8 @@
 #import <StoreKit/StoreKit.h>
 #import <SafariServices/SafariServices.h>
 
+#import "SecurityNote-Swift.h"
+
 @interface TCMeController ()<UITableViewDataSource,UITableViewDelegate,MFMessageComposeViewControllerDelegate,MFMailComposeViewControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 
@@ -210,7 +212,7 @@ NSTimer * timer;
         // 设置邮件内容
         NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
         
-        NSString * messBody = [NSString stringWithFormat:@"我使用的当前版本:%@,%@,OS %@\n我的反馈和建议：\n1、\n2、\n3、",[infoDictionary objectForKey:@"CFBundleShortVersionString"],[[UIDevice currentDevice] model],[[UIDevice currentDevice] systemVersion]];
+        NSString * messBody = [NSString stringWithFormat:@"我使用的当前版本:%@，%@,OS %@\n我的反馈和建议：\n1、\n2、\n3、",[infoDictionary objectForKey:@"CFBundleShortVersionString"],[[UIDevice currentDevice] model],[[UIDevice currentDevice] systemVersion]];
 
         [mail setMessageBody:messBody isHTML:NO];
         
@@ -282,8 +284,16 @@ NSTimer * timer;
         [self openWebView:@"https://raw.githubusercontent.com/iHTCboy/SecurityNote/master/LICENSE"];
     }
     
+    //开发者应用
+    if ([indexPath section] == 1 && [indexPath row] == 8) {
+        ITAdvancelDetailViewController *vc = [[ITAdvancelDetailViewController alloc] init];
+        vc.title = @"Apps";
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
     //关于密记
-    if ([indexPath section] == 1 && [indexPath row] == 8)
+    if ([indexPath section] == 1 && [indexPath row] == 9)
     {
         TCAbutSNoteViewController * about = [[TCAbutSNoteViewController alloc]init];
         self.hidesBottomBarWhenPushed = YES;

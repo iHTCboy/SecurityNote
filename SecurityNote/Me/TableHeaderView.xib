@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableHeaderView" customModule="iEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="52i-Ku-ABx" id="tsz-3G-tw7"/>
+                <outlet property="subtitleLbl" destination="9gp-8M-0vG" id="90v-5n-Qme"/>
+                <outlet property="titleLbl" destination="bBf-Br-B5M" id="Xgq-0D-kCb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="52i-Ku-ABx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-Br-B5M">
+                    <rect key="frame" x="20" y="20" width="344" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gp-8M-0vG">
+                    <rect key="frame" x="45" y="20" width="344" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bBf-Br-B5M" secondAttribute="bottom" constant="10" id="5hB-xc-iEH"/>
+                <constraint firstItem="bBf-Br-B5M" firstAttribute="leading" secondItem="52i-Ku-ABx" secondAttribute="leading" constant="20" id="5t7-gY-o0P"/>
+                <constraint firstItem="9gp-8M-0vG" firstAttribute="width" secondItem="bBf-Br-B5M" secondAttribute="width" id="6kX-Ox-7eO"/>
+                <constraint firstAttribute="trailing" secondItem="bBf-Br-B5M" secondAttribute="trailing" constant="50" id="HY1-2z-zyb"/>
+                <constraint firstItem="bBf-Br-B5M" firstAttribute="top" secondItem="52i-Ku-ABx" secondAttribute="top" constant="20" id="NmE-XS-bS0"/>
+                <constraint firstAttribute="bottom" secondItem="9gp-8M-0vG" secondAttribute="bottom" constant="10" id="dSi-47-gJz"/>
+                <constraint firstItem="9gp-8M-0vG" firstAttribute="top" secondItem="52i-Ku-ABx" secondAttribute="top" constant="20" id="voF-mK-kgM"/>
+                <constraint firstAttribute="trailing" secondItem="9gp-8M-0vG" secondAttribute="trailing" constant="25" id="xQo-ti-wIl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="201.59999999999999" y="50.985221674876847"/>
+        </view>
+    </objects>
+</document>
