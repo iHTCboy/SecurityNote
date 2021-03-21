@@ -124,9 +124,7 @@
 {
     [super viewWillAppear:YES];
     
-    //必须重新查询数据库更新数据
-    self.memoLists = [self.memoNote queryWithNote];
-    [self.memoTable reloadData];
+
 }
 
 
@@ -141,7 +139,11 @@
     completion:^(BOOL finished)
      {
          TCAddMemoViewController *toAddController = [[TCAddMemoViewController alloc]init];
-         
+        [toAddController viewDidColseCompletion:^{
+            //必须重新查询数据库更新数据
+            self.memoLists = [self.memoNote queryWithNote];
+            [self.memoTable reloadData];
+        }];
          [self presentViewController:toAddController animated:YES completion:^{
              
              add.layer.transform = CATransform3DIdentity;

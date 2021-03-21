@@ -10,4 +10,6 @@
 
 @interface TCAddSimpleNoteViewController : UIViewController
 
+- (void)viewDidColseCompletion:(void (^)(void))completion;
+
 @end

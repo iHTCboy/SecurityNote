@@ -97,10 +97,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    
-    //必须重新查询数据库更新数据
-    self.diaryLists = [self.diaryNote queryWithNote];
-    [self.diaryTable reloadData];
+
 }
 
 - (void)panView:(UIPanGestureRecognizer *)pan
@@ -142,7 +139,11 @@
     completion:^(BOOL finished)
      {
          TCAddDiaryViewController *toAddController = [[TCAddDiaryViewController alloc]init];
-         
+        [toAddController viewDidColseCompletion:^{
+            //必须重新查询数据库更新数据
+            self.diaryLists = [self.diaryNote queryWithNote];
+            [self.diaryTable reloadData];
+        }];
          [self presentViewController:toAddController animated:YES completion:^{
              
              add.layer.transform = CATransform3DIdentity;

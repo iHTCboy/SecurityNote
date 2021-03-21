@@ -24,6 +24,8 @@
 
 @property (nonatomic, copy) NSString * originalDate;
 
+@property (nonatomic, copy) dispatch_block_t completionBlock;
+
 @end
 
 @implementation TCAddDiaryViewController
@@ -311,12 +313,18 @@
     //插入到数据库中
     [self.diaryNote insertNote:self.diaryNote];
     
+    !self.completionBlock ?:self.completionBlock();
+    
     //返回
     [self dismissViewControllerAnimated:YES completion:^{
         
-        ;
     }];
     
+}
+
+- (void)viewDidColseCompletion:(void (^)(void))completion
+{
+    self.completionBlock = completion;
 }
 
 

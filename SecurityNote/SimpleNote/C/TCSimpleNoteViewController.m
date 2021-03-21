@@ -171,9 +171,6 @@
 {
     [super viewWillAppear:YES];
     
-    //必须重新查询数据库更新数据
-    self.noteDatas = [self.TCnote queryWithData];
-    [self.simpleTable reloadData];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -195,7 +192,11 @@
     completion:^(BOOL finished)
      {
          TCAddSimpleNoteViewController *toAddController =[[TCAddSimpleNoteViewController alloc]init];
-         
+        [toAddController viewDidColseCompletion:^{
+            //必须重新查询数据库更新数据
+            self.noteDatas = [self.TCnote queryWithData];
+            [self.simpleTable reloadData];
+        }];
          [self presentViewController:toAddController animated:YES completion:^{
              
              add.layer.transform = CATransform3DIdentity;

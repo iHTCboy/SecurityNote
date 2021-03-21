@@ -450,15 +450,15 @@
     </scenes>
     <resources>
         <image name="Evaluate.png" width="60" height="60"/>
-        <image name="appstore.png" width="60" height="60"/>
+        <image name="appstore.png" width="60" height="59"/>
         <image name="baiwan.png" width="14.399999618530273" height="13.680000305175781"/>
         <image name="bi.png" width="14.159999847412109" height="14.399999618530273"/>
         <image name="bii.png" width="60" height="60"/>
         <image name="help.png" width="60" height="60"/>
         <image name="list.png" width="11.760000228881836" height="14.399999618530273"/>
         <image name="messge.png" width="60" height="60"/>
-        <image name="password.png" width="72" height="72"/>
-        <image name="reward.png" width="72" height="72"/>
+        <image name="password.png" width="60" height="60"/>
+        <image name="reward.png" width="60" height="60"/>
         <image name="seare.png" width="60" height="60"/>
         <image name="we.png" width="14.399999618530273" height="14.159999847412109"/>
         <systemColor name="labelColor">

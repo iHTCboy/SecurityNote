@@ -10,4 +10,6 @@
 
 @interface TCAddMemoViewController : UIViewController
 
+- (void)viewDidColseCompletion:(void (^)(void))completion;
+
 @end

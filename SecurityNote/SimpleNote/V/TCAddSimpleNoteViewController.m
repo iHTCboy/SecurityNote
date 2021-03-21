@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) NSMutableArray * noteArray;
 
+@property (nonatomic, copy) dispatch_block_t completionBlock;
+
 @end
 
 @implementation TCAddSimpleNoteViewController
@@ -224,12 +226,17 @@
 
 -(void)back
 {
+    !self.completionBlock ?:self.completionBlock();
     
     [self dismissViewControllerAnimated:YES completion:^{
         
-        
     }];
     
+}
+
+- (void)viewDidColseCompletion:(void (^)(void))completion
+{
+    self.completionBlock = completion;
 }
 
 

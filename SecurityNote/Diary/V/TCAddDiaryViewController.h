@@ -11,4 +11,6 @@
 
 @interface TCAddDiaryViewController : UIViewController
 
+- (void)viewDidColseCompletion:(void (^)(void))completion;
+
 @end

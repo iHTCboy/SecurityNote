@@ -27,6 +27,7 @@
 
 @property (nonatomic, strong) NSMutableArray * yearArray;
 
+@property (nonatomic, copy) dispatch_block_t completionBlock;
 
 @end
 
@@ -363,13 +364,20 @@
     //插入到数据库中
     [self.memoNote insertNote:self.memoNote];
     
+    !self.completionBlock ?:self.completionBlock();
+    
     //返回
     [self dismissViewControllerAnimated:YES completion:^{
         
-        ;
     }];
     
 }
+
+- (void)viewDidColseCompletion:(void (^)(void))completion
+{
+    self.completionBlock = completion;
+}
+
 
 
 //取消时间选择器
