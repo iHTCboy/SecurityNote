@@ -387,7 +387,7 @@ NSTimer * timer;
         MFMessageComposeViewController *mess = [[MFMessageComposeViewController alloc] init];
         
         // 设置短信内容
-        mess.body = @"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用吧！你一定会喜欢！";
+        mess.body = @"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用吧！你一定会喜欢！AppStore：https://itunes.apple.com/cn/app/inotes/id925021570";
         
         // 设置收件人列表
         //mess.recipients = @[@"joonsheng.htc@icloud.com"];
@@ -408,7 +408,7 @@ NSTimer * timer;
         // 设置邮件主题
         [mail setSubject:@"亲，快来下载密记试试啊！"];
         // 设置邮件内容
-        [mail setMessageBody:@"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用啊！你一定会喜欢！" isHTML:NO];
+        [mail setMessageBody:@"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用啊！你一定会喜欢！AppStore：https://itunes.apple.com/cn/app/inotes/id925021570" isHTML:NO];
         
         // 设置代理
         mail.mailComposeDelegate = self;

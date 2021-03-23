@@ -288,7 +288,7 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seare.png" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-XD-Pk6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share.png" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-XD-Pk6">
                                                     <rect key="frame" x="25" y="5" width="27" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -372,7 +372,7 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help.png" translatesAutoresizingMaskIntoConstraints="NO" id="axb-VZ-Trj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userAgreement.png" translatesAutoresizingMaskIntoConstraints="NO" id="axb-VZ-Trj">
                                                     <rect key="frame" x="22" y="8" width="27" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -393,7 +393,7 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appstore.png" translatesAutoresizingMaskIntoConstraints="NO" id="hJl-HP-sdI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apps.png" translatesAutoresizingMaskIntoConstraints="NO" id="hJl-HP-sdI">
                                                     <rect key="frame" x="22" y="8" width="27" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -450,6 +450,7 @@
     </scenes>
     <resources>
         <image name="Evaluate.png" width="60" height="60"/>
+        <image name="apps.png" width="60" height="60"/>
         <image name="appstore.png" width="60" height="59"/>
         <image name="baiwan.png" width="14.399999618530273" height="13.680000305175781"/>
         <image name="bi.png" width="14.159999847412109" height="14.399999618530273"/>
@@ -459,7 +460,8 @@
         <image name="messge.png" width="60" height="60"/>
         <image name="password.png" width="60" height="60"/>
         <image name="reward.png" width="60" height="60"/>
-        <image name="seare.png" width="60" height="60"/>
+        <image name="share.png" width="60" height="60"/>
+        <image name="userAgreement.png" width="60" height="60"/>
         <image name="we.png" width="14.399999618530273" height="14.159999847412109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
