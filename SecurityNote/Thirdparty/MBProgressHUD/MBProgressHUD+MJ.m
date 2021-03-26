@@ -11,7 +11,7 @@
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [[self get_topPresentedViewController] view];
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = text;
@@ -27,6 +27,36 @@
     [hud hide:YES afterDelay:0.7];
 }
 
++ (UIViewController *)get_topPresentedViewController
+{
+    UIViewController *rootVC = nil;
+    if (@available(iOS 13.0, *)) {
+        UIWindow *foundWindow = nil;
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for (UIWindow *window in windows) {
+            if (window.isKeyWindow) {
+                foundWindow = window;
+                break;
+            }
+        }
+        rootVC = [foundWindow rootViewController];
+    }
+    else {
+        rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
+    
+    if (!rootVC) {
+        NSLog(@"find window rootViewController is nil!");
+        rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
+    
+    while (rootVC.presentedViewController) {
+        rootVC = rootVC.presentedViewController;
+    }
+    
+    return rootVC;
+}
+
 #pragma mark 显示错误信息
 + (void)showError:(NSString *)error toView:(UIView *)view{
     [self show:error icon:@"error.png" view:view];
@@ -39,7 +69,7 @@
 
 #pragma mark 显示一些信息
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view =  [[self get_topPresentedViewController] view];
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = message;
