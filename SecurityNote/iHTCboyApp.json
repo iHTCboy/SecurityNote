@@ -5,39 +5,39 @@
         "issue_list": [
             {
                 "title": "爱番茄 - iPomodoro",
-                "url": "https://apps.apple.com/cn/app/ipomodoro/id1439666929",
-                "author": "一款有效的時間管理番茄工作法"
-            },
-            {
-                "title": "iLeetCoder",
-                "url": "https://itunes.apple.com/us/app/iLeetCoder/id1458259471?l=zh&ls=1&mt=8",
-                "author": "一款精心的算法题目学习App，迅速找到工作"
-            },
-            {
-                "title": "iTer",
-                "url": "https://itunes.apple.com/us/app/italker-it/id1224934068?l=zh&ls=1&mt=8",
-                "author": "10000+ IT企业题库，为升职面试准备"
+                "url": "https://apps.apple.com/cn/app/iPomodoro/id1439666929",
+                "author": "一款高效時間管理番茄工作法"
             },
             {
                 "title": "爱五笔",
-                "url": "https://itunes.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8",
+                "url": "https://apps.apple.com/cn/app/iWuBi/id1459028801?l=zh&ls=1&mt=8",
                 "author": "五笔学习App，支持86版和98版/简体和繁体"
             },
             {
+                "title": "iTer",
+                "url": "https://apps.apple.com/us/app/iTer/id1224934068?l=zh&ls=1&mt=8",
+                "author": "10000+ IT企业题库，为升职面试准备"
+            },
+            {
+                "title": "iNote",
+                "url": "https://apps.apple.com/cn/app/iNote/id925021570?l=zh&mt=8",
+                "author": "简单简洁简明简便的生活小密记"
+            },
+            {
                 "title": "iEnglish",
-                "url": "https://itunes.apple.com/cn/app/iEnglish/id1236558125?l=zh&ls=1&mt=8",
-                "author": "初学者必备词汇，3000入门单词和词汇分类学习"
+                "url": "https://apps.apple.com/cn/app/iEnglish/id1236558125?l=zh&ls=1&mt=8",
+                "author": "初学者必备3000入门单词和分类学习"
             },
             {
                 "title": "iBrowser",
-                "url": "https://itunes.apple.com/cn/app/iBrowser/id948944368",
+                "url": "https://apps.apple.com/cn/app/iBrowser/id948944368",
                 "author": "简单无边的全屏浏览器"
             },
             {
-                "title": "SecurityNote",
-                "url": "https://itunes.apple.com/cn/app/mi-ji-yu-zhong-bu-tong-ji/id925021570?l=zh&mt=8",
-                "author": "简单简洁简明简便的生活小密记"
-            }
+                "title": "iLeetCoder",
+                "url": "https://apps.apple.com/us/app/iLeetCoder/id1458259471?l=zh&ls=1&mt=8",
+                "author": "一款精心的算法题目学习App"
+            },
         ]
     },
     {
@@ -50,14 +50,14 @@
                 "author": "一张思维导图的知识"
             },
             {
-                "title": "iTalker",
-                "url": "https://github.com/iHTCboy/iTalker",
-                "author": "IT学习、求职面试必备，IT面试基础必备试题指南"
+                "title": "NotesEveryDay",
+                "url": "https://iHTCboy.com/NotesEveryDay/",
+                "author": "记录每天学习笔记和技术知识点"
             },
             {
-                "title": "English",
-                "url": "https://github.com/iHTCboy/iEnglish",
-                "author": "初学者必备词汇，3000入门单词和词汇分类学习"
+                "title": "iPomodoro-Flutter",
+                "url": "https://github.com/iHTCboy/iPomodoro-Flutter",
+                "author": "一款高效時間管理番茄工作法25分钟"
             },
             {
                 "title": "iWuBi",
@@ -70,12 +70,22 @@
                 "author": "一款IT工程师们提供算法知识充电的应用"
             },
             {
-                "title": "FullScreenBrowser",
+                "title": "iTer",
+                "url": "https://github.com/iHTCboy/iTalker",
+                "author": "IT学习、求职面试必备，IT面试基础必备试题指南"
+            },
+            {
+                "title": "iEnglish",
+                "url": "https://github.com/iHTCboy/iEnglish",
+                "author": "初学者必备词汇，3000入门单词和词汇分类学习"
+            },
+            {
+                "title": "iBrowser",
                 "url": "https://github.com/iHTCboy/FullScreenBrowser",
                 "author": "一个超简单的全屏浏览器，真实无边"
             },
             {
-                "title": "SecurityNote",
+                "title": "iNote",
                 "url": "https://github.com/iHTCboy/SecurityNote",
                 "author": "超级简单和好用的笔记事本App"
             },

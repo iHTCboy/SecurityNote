@@ -121,6 +121,13 @@
 
 -(void)addRow:(UIImageView* )add
 {
+    // overlength
+    if (self.noteArray.count > 26) {
+        UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"最多26条简记项~" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alter show];
+        return;
+    }
+    
     [UIView animateWithDuration:0.1 animations:^{
         
         add.layer.transform = CATransform3DMakeScale(1.3, 1.3, 0);

@@ -16,6 +16,7 @@
 		6D071E871999B14B003A9F8D /* TCMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D071E861999B14B003A9F8D /* TCMeController.m */; };
 		6D09BA65199F0B1B009363FF /* TCAddMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09BA64199F0B1B009363FF /* TCAddMemoViewController.m */; };
 		6D09E4B6199CB6F600CEA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D09E4B4199CB6F600CEA8B3 /* Main.storyboard */; };
+		6D0B412629837C5C006F8C18 /* UserFeedBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B412529837C5C006F8C18 /* UserFeedBack.framework */; };
 		6D172EDB19DA4626004E0B96 /* TCEditMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D172EDA19DA4626004E0B96 /* TCEditMemoViewController.m */; };
 		6D172EDE19DA4640004E0B96 /* TCMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D172EDD19DA4640004E0B96 /* TCMemo.m */; };
 		6D172EE119DA464D004E0B96 /* TCMemoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D172EE019DA464D004E0B96 /* TCMemoTool.m */; };
@@ -39,7 +40,6 @@
 		6D2C0FAB2157F24C00C37783 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C0F972157F24C00C37783 /* MBProgressHUD.m */; };
 		6D2C0FAC2157F24C00C37783 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C0F9A2157F24C00C37783 /* MBProgressHUD+MJ.m */; };
 		6D2C0FAD2157F24C00C37783 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D2C0F9B2157F24C00C37783 /* MBProgressHUD.bundle */; };
-		6D2C0FAE2157F24C00C37783 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C0F9D2157F24C00C37783 /* libBaiduMobStat.a */; };
 		6D2C0FAF2157F24C00C37783 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C0FA12157F24C00C37783 /* FMDatabaseQueue.m */; };
 		6D2C0FB02157F24C00C37783 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C0FA42157F24C00C37783 /* FMDatabaseAdditions.m */; };
 		6D2C0FB12157F24C00C37783 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C0FA52157F24C00C37783 /* FMDatabase.m */; };
@@ -122,6 +122,7 @@
 		6DC4A9CF1A43388E007CEC75 /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC4A9CE1A43388E007CEC75 /* help@2x.png */; };
 		6DEB8A7A19D19A04004D842A /* cluck@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB8A7919D19A04004D842A /* cluck@2x.jpg */; };
 		6DF62184199E1C780026026C /* TCAddSimpleNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF62183199E1C780026026C /* TCAddSimpleNoteViewController.m */; };
+		6DF6A243296B03F700AB7052 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C0F9D2157F24C00C37783 /* libBaiduMobStat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		6D09E4A5199C70DB00CEA8B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6D09E4A6199C70DB00CEA8B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6D09E4B5199CB6F600CEA8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D0B412529837C5C006F8C18 /* UserFeedBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserFeedBack.framework; sourceTree = "<group>"; };
 		6D172ED919DA4626004E0B96 /* TCEditMemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCEditMemoViewController.h; sourceTree = "<group>"; };
 		6D172EDA19DA4626004E0B96 /* TCEditMemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCEditMemoViewController.m; sourceTree = "<group>"; };
 		6D172EDC19DA4640004E0B96 /* TCMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMemo.h; sourceTree = "<group>"; };
@@ -336,13 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D06A3A3227C861A00606D2A /* SafariServices.framework in Frameworks */,
+				6DF6A243296B03F700AB7052 /* libBaiduMobStat.a in Frameworks */,
 				6DC36430199886B6008A9CDE /* CoreGraphics.framework in Frameworks */,
 				6D195B531EBB7AF30081D227 /* StoreKit.framework in Frameworks */,
 				6D195B511EBB7AED0081D227 /* WebKit.framework in Frameworks */,
 				6D195B4F1EBB7AE20081D227 /* libc++.tbd in Frameworks */,
+				6D0B412629837C5C006F8C18 /* UserFeedBack.framework in Frameworks */,
 				6D195B4D1EBB7AD10081D227 /* libz.1.2.5.tbd in Frameworks */,
 				6D195B4B1EBB7AC50081D227 /* SystemConfiguration.framework in Frameworks */,
-				6D2C0FAE2157F24C00C37783 /* libBaiduMobStat.a in Frameworks */,
 				6D195B491EBB7ABF0081D227 /* JavaScriptCore.framework in Frameworks */,
 				6D195B471EBB7AB90081D227 /* CoreTelephony.framework in Frameworks */,
 				6D195B451EBB7AB30081D227 /* CoreLocation.framework in Frameworks */,
@@ -511,6 +514,7 @@
 			children = (
 				6D2C0F9D2157F24C00C37783 /* libBaiduMobStat.a */,
 				6D2C0F9E2157F24C00C37783 /* BaiduMobStat.h */,
+				6D0B412529837C5C006F8C18 /* UserFeedBack.framework */,
 			);
 			path = baidu_ios_api;
 			sourceTree = "<group>";
@@ -1327,9 +1331,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2021.03.26;
+				CURRENT_PROJECT_VERSION = 2023.01.28;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityNote/SecurityNote-Prefix.pch";
 				INFOPLIST_FILE = "SecurityNote/SecurityNote-Info.plist";
@@ -1339,7 +1346,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 8.3.0;
+				MARKETING_VERSION = 9.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_MODULE_NAME = SecurityNote;
@@ -1360,9 +1367,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2021.03.26;
+				CURRENT_PROJECT_VERSION = 2023.01.28;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityNote/SecurityNote-Prefix.pch";
 				INFOPLIST_FILE = "SecurityNote/SecurityNote-Info.plist";
@@ -1372,7 +1382,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SecurityNote/Thirdparty/baidu_ios_api",
 				);
-				MARKETING_VERSION = 8.3.0;
+				MARKETING_VERSION = 9.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = securitynote;
 				PRODUCT_MODULE_NAME = SecurityNote;

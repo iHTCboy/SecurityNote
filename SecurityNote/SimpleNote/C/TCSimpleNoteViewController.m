@@ -61,6 +61,10 @@
     simpleTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     simpleTable.delegate = self;
     simpleTable.dataSource = self;
+    if (@available(iOS 15.0, *)) {
+        simpleTable.sectionHeaderTopPadding = 0.0;
+    }
+    
     self.simpleTable = simpleTable;
     [self.view addSubview:simpleTable];
     
@@ -184,7 +188,7 @@
 -(void)addNew:(UIImageView* )add
 {
     
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.15 animations:^{
         
         add.layer.transform = CATransform3DMakeScale(2, 2, 0);
         add.alpha = 0;
@@ -335,6 +339,13 @@
     {
         //拿到当前要删除的列表的所在分区
          self.TCnote = self.noteDatas[[indexPath section]];
+        
+        // overlength
+        if (self.TCnote.count > 26) {
+            UIAlertView * alter = [[UIAlertView alloc] initWithTitle:@"提示" message:@"最多26条简记项~" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alter show];
+            return;
+        }
         
         //更改列表文字
         [[self.TCnote.datas objectAtIndex:0] insertObject:@"新简记" atIndex:[indexPath row] + 1 ];

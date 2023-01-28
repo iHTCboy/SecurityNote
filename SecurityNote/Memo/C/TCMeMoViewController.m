@@ -47,6 +47,10 @@
     memoTable.delegate = self;
     memoTable.dataSource = self;
     
+    if (@available(iOS 15.0, *)) {
+        memoTable.sectionHeaderTopPadding = 0.0;
+    }
+    
     self.memoTable = memoTable;
     [self.view addSubview:memoTable];
     
@@ -131,7 +135,7 @@
 //点击增加按钮，进入添加简记
 -(void)addNew:(UIImageView* )add
 {
-    [UIImageView animateWithDuration:0.3 animations:^{
+    [UIImageView animateWithDuration:0.15 animations:^{
         
         add.layer.transform = CATransform3DMakeScale(2, 2, 0);
         add.alpha = 0;

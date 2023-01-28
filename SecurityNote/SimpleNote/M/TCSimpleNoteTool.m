@@ -89,8 +89,8 @@ static FMDatabaseQueue *_queue;
             for (int i = 0; i < datanote.count; i++)
             {
                
-                [oneData addObject:[rs stringForColumnIndex:i+2]];
-                
+                id result = [rs stringForColumnIndex:i+2];
+                [oneData addObject:result ? result : @"--- overlength"];
             }
             
         [datanote.datas addObject:oneData];

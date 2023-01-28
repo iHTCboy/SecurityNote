@@ -60,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,6 +96,9 @@
         case 2:
             cell.textLabel.text = @"打赏1杯咖啡☕";
             break;
+        case 3:
+            cell.textLabel.text = @"高级VIP月卡🧑‍💻";
+            break;
         default:
             break;
     }
@@ -117,6 +120,9 @@
             break;
         case 2:
             goodsID = @"com.iHTCboy.iNote.coffee";
+            break;
+        case 3:
+            goodsID = @"com.iHTCboy.iNote.month";
             break;
         default:
             break;
@@ -166,6 +172,10 @@
                 
                 break;
             case SKPaymentTransactionStatePurchased:{
+                NSURL *receiptUrl=[[NSBundle mainBundle] appStoreReceiptURL];
+                NSData *receiptData=[NSData dataWithContentsOfURL:receiptUrl];
+                NSString *receiptString=[receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];//交易凭证转化为base64字符串
+                NSLog(@"receiptString: %@", receiptString);
                 // demo 可以这样完成交易，但实际还是要真的发货成功才调用
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 
