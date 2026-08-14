@@ -38,6 +38,9 @@ class ITAdvancelDetailViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0.0;
+        }
         return tableView
     }()
 }

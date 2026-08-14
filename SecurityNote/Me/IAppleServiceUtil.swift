@@ -64,8 +64,8 @@ class IAppleServiceUtil: NSObject {
         }
     }
     
-    class func openAppstore(url: String, isAssessment: Bool) {
-        let iURL = URL.init(string: url + (isAssessment ? "&action=write-review": ""))!
+    class func openAppstore(url: String, isAssessment _: Bool) {
+        let iURL = URL.init(string: url)!
         if UIApplication.shared.canOpenURL(iURL) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(iURL, options: [:], completionHandler: nil)

@@ -69,9 +69,9 @@
     }
     
     UIButton * goUrl = [[UIButton alloc]init];
-    goUrl.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.7);
+    goUrl.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.85);
     goUrl.bounds = CGRectMake(0, 0,200, 30);
-    [goUrl setTitle:@"访问密记" forState:UIControlStateNormal];
+    [goUrl setTitle:@"联系开发者" forState:UIControlStateNormal];
     [goUrl setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [goUrl setTitleColor:TCCoror(186, 186, 192) forState:UIControlStateDisabled];
     goUrl.adjustsImageWhenHighlighted = NO;

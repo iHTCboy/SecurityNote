@@ -396,7 +396,7 @@ typedef void (^MBProgressHUDCompletionBlock)(void);
 /** 
  * The progress of the progress indicator, from 0.0 to 1.0. Defaults to 0.0. 
  */
-@property (assign) float progress;
+@property (assign) float progresss;
 
 /**
  * The minimum size of the HUD bezel. Defaults to CGSizeZero (no minimum size).

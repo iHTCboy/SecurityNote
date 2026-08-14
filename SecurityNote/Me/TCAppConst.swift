@@ -32,7 +32,6 @@ let isIPhone6P = SCREENH == 736 ? true : false
 let kAppName = "App Name"
 let kAppAppleId = "1236558125"
 let kAppDownloadURl = "https://itunes.apple.com/cn/app/" + kAppName + "/id" + kAppAppleId + "?l=zh&ls=1&mt=8"
-let kReviewAction = "&action=write-review"
 let kGithubURL = "https://github.com/iHTCboy/" + "i" + kAppName
 let kEmail = "iHTCdevelop@gmail.com"
 let kStatusBarH: CGFloat = 20

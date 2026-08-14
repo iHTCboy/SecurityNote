@@ -60,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 3;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,14 +135,14 @@
        [[SKPaymentQueue defaultQueue] addPayment:payment];
     }
     
-//    NSArray *inArray = @[goodsID];
-//    NSSet *productIdentifiers = [NSSet setWithArray:inArray];
-//    SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
-//    productsRequest.delegate = self;
-//    [productsRequest start];
+    NSArray *inArray = @[goodsID];
+    NSSet *productIdentifiers = [NSSet setWithArray:inArray];
+    SKProductsRequest *productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
+    productsRequest.delegate = self;
+    [productsRequest start];
 }
 
-- (void) paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions {
+- (void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions {
     
     NSString *state, *error, *transactionIdentifier, *transactionReceipt, *productId;
     NSInteger errorCode;
@@ -162,6 +162,10 @@
             case SKPaymentTransactionStateFailed:
                 // demo 可以这样完成交易，但实际还是要真的发货成功才调用
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                
+                NSLog(@"paymentQueue: error: %@", transaction.error);
+                NSLog(@"paymentQueue: localizedDescription: %@", transaction.error.localizedDescription);
+                NSLog(@"paymentQueue: description: %@", transaction.error.description);
                 
                 if (transaction.error.code == SKErrorPaymentCancelled) {
                     UIAlertController *vc= [UIAlertController alertControllerWithTitle:@"打赏已取消" message:@"感谢您的支持！🤟🏻" preferredStyle:UIAlertControllerStyleAlert];
@@ -192,40 +196,36 @@
     }
     
 }
-                
-                
 
+- (void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response {
 
-//- (void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response {
-//
-//    NSMutableArray *validProducts = [NSMutableArray array];
-//    for (NSString *pid in response.invalidProductIdentifiers) {
-//        NSLog(@"invalidProductIdentifiers: %@", pid);
-//    }
-//
-//    for (SKProduct *product in response.products) {
-//        // Get the currency code from the NSLocale object
-//        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-//        [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
-//        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-//        [numberFormatter setLocale:product.priceLocale];
-//        NSString *currencyCode = [numberFormatter currencyCode];
-//
-//        NSLog(@"productsRequest:didReceiveResponse:  - %@: %@", product.productIdentifier, product.localizedTitle);
-//        NSLog(@"%@",NILABLE(product.localizedDescription));
-//        NSLog(@"%@",NILABLE(product.localizedTitle));
-//        NSLog(@"%@",NILABLE(product.price));
-//        NSLog(@"%@",NILABLE(product.priceLocale));
-//        NSLog(@"%@",NILABLE(product.productIdentifier));
-//        NSLog(@"%@",(product.downloadable));
-//        NSLog(@"%@",NILABLE(product.downloadContentLengths));
-//        NSLog(@"%@",NILABLE(product.downloadContentVersion));
-//        //NSLog(@"%@",NILABLE(product.subscriptionPeriod));
-//        //NSLog(@"%@",NILABLE(product.introductoryPrice));
-//
-//        NSLog(@"currencyCode: %@",currencyCode);
-//    }
-//}
+    for (NSString *pid in response.invalidProductIdentifiers) {
+        NSLog(@"invalidProductIdentifiers: %@", pid);
+    }
+
+    for (SKProduct *product in response.products) {
+        // Get the currency code from the NSLocale object
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+        [numberFormatter setLocale:product.priceLocale];
+        NSString *currencyCode = [numberFormatter currencyCode];
+
+        NSLog(@"productsRequest:didReceiveResponse:  - %@: %@", product.productIdentifier, product.localizedTitle);
+        NSLog(@"%@", product.localizedDescription);
+        NSLog(@"%@", product.localizedTitle);
+        NSLog(@"%@", product.price);
+        NSLog(@"%@", product.priceLocale);
+        NSLog(@"%@", product.productIdentifier);
+//        NSLog(@"%@", product.downloadable);
+//        NSLog(@"%@", product.downloadContentLengths);
+//        NSLog(@"%@", product.downloadContentVersion);
+        //NSLog(@"%@",NILABLE(product.subscriptionPeriod));
+        //NSLog(@"%@",NILABLE(product.introductoryPrice));
+
+        NSLog(@"currencyCode: %@",currencyCode);
+    }
+}
 
 
 @end

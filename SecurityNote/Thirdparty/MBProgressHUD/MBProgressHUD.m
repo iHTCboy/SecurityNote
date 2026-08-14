@@ -96,7 +96,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @synthesize mode;
 @synthesize labelText;
 @synthesize detailsLabelText;
-@synthesize progress;
+@synthesize progresss;
 @synthesize size;
 #if NS_BLOCKS_AVAILABLE
 @synthesize completionBlock;
@@ -676,7 +676,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		detailsLabel.font = self.detailsLabelFont;
 	} else if ([keyPath isEqualToString:@"progress"]) {
 		if ([indicator respondsToSelector:@selector(setProgress:)]) {
-			[(id)indicator setProgress:progress];
+			[(id)indicator setProgresss:progresss];
 		}
 		return;
 	}

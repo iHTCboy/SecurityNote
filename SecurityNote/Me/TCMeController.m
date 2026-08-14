@@ -196,9 +196,7 @@ NSTimer * timer;
     {
         if (![MFMailComposeViewController canSendMail]) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前设备不支持发送邮件~" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alert addAction:action];
             [self presentViewController:alert animated:YES completion:nil];
             return;
@@ -390,7 +388,7 @@ NSTimer * timer;
         mess.body = @"亲，我现在使用密记，这款应用非常棒！记列表，写日记，备忘录，非常实用的功能，并且整个界面很简洁，你也快来下载试试用吧！你一定会喜欢！AppStore：https://itunes.apple.com/cn/app/inotes/id925021570";
         
         // 设置收件人列表
-        //mess.recipients = @[@"joonsheng.htc@icloud.com"];
+        //mess.recipients = @[@""];
         
         // 设置代理
         mess.messageComposeDelegate = self;
@@ -401,7 +399,13 @@ NSTimer * timer;
     else if(actionSheet.tag == 2 &&buttonIndex == 1)
     {
         // 不能发邮件
-        //if (![MFMailComposeViewController canSendMail]) return;
+        if (![MFMailComposeViewController canSendMail]) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前设备不支持发送邮件~" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+            return;
+        }
         
         MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
         
